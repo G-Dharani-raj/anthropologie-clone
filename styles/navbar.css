@@ -1,0 +1,150 @@
+ 
+#first_navbar {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    background-color: #AF2C2C;
+}
+
+.first_navbar {
+    padding: 5px 15px;
+    color: #ffffff;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.first_navbar a {
+    color: #ffffff;
+}
+
+#language_tab {
+    background-color: #f7f6f2;
+    border-bottom: 1px solid #f7f6f2;
+    display: flex;
+    gap: 30px;
+    justify-items: center;
+    padding: 10px;
+    justify-content: flex-end;
+    padding-right: 50px;
+    font-family: sans-serif;
+}
+
+#left button {
+    color: #167a92;
+    border: none;
+}
+
+#right button {
+
+    border: none;
+}
+
+#right a {
+    color: #167a92;
+    border: none;
+}
+
+#search_tab-box {
+    padding: 10px;
+    /* border:solid 1px #1d565d; */
+    color: #1d565d;
+    border: none;
+}
+
+#search_tab {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    padding-right: 30px;
+    padding-left: 20px;
+    border-bottom: solid 1px rgb(198, 194, 194);
+
+}
+
+#first {
+    display: flex;
+
+    height: 60px;
+    align-content: center;
+    justify-content: space-around;
+}
+
+#a,
+#b {
+    height: 100%;
+    display: flex;
+    margin-top: 23px;
+
+    padding: 0px 15px 0px 15px;
+    align-items: center;
+    align-content: center;
+    border: solid 1px rgb(198, 194, 194);
+    border-bottom: none;
+
+    justify-content: center;
+
+}
+
+#a {
+    border-top: solid 4px #167a92;
+}
+
+#last {
+    display: flex;
+    margin: 10px;
+    /* border: solid 1px red; */
+    /* justify-content: center; */
+    margin-right: 70px;
+    align-content: center;
+    align-items: center;
+    gap: 30px;
+    justify-content: space-around;
+    height: 100%;
+}
+
+#last img {
+    width: 20px;
+    justify-content: center;
+}
+
+#last1 {
+    display: flex;
+    margin-top: 23px;
+
+    border: solid 1px #1d565d;
+    color: #1d565d;
+    border-radius: 5px;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    gap: 50px;
+    padding: 5px 10px;
+}
+
+#search-box {
+    padding: 10px;
+    /* border:solid 1px #1d565d; */
+    color: #1d565d;
+    border: none;
+}
+
+#catogary_tab {
+    display: flex;
+    gap: 30px;
+    margin: 15px 15px;
+    color: #26262c;
+    font-family: 'Times New Roman', Times, serif;
+    height: 100%;
+    letter-spacing: .06rem;
+
+}
+
+#catogary_tab div:hover {
+    color: #046673;
+    cursor: pointer;
+}
+
+hr {
+    background-color: #f7f6f2;
+} 
