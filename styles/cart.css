@@ -1,0 +1,11 @@
+#cart {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	width: 70%;
+	margin: auto;
+	gap: 10px;
+}
+
+.card {
+	text-align: center;
+}
