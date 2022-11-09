@@ -1,4 +1,6 @@
 // Code here
+
+import { signin } from '/components/signin.js';
     document.querySelector("#signinimg").addEventListener("click",code)
     document.querySelector("#signin").addEventListener("click",code)
     
