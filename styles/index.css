@@ -1,6 +1,9 @@
 /* Code here */
 
 /* all images boxes on main home page */
+html{
+    scroll-behavior: smooth;
+}
 #container{
     width: 92%;
     margin: auto;
@@ -41,4 +44,303 @@
 
 .top_small_row>div>a>img, .top_main>div>a>img, .tri_box>div>a>img, .big_two_box>div>a>img{
     width: 100%;
+}#signin_signup{
+    width:13%;
+    border:0px;
+    background-color:#f7f6f2;
+     
+}.signinbutton{
+    display:flex;
+   color:#0d93b4;
+    gap:6px;
+    cursor:pointer;
+}.signinbutton:hover{
+ filter: grayscale(100%);
+}#signinimg{
+    width:15%;
+   
+}#signinimg +p{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* }body :not(#signin_signup_form){
+    filter: blur(0.3px);
+    opacity: 0.9;
+}*/
+}#signin_signup_popup{
+    visibility: hidden;
+    width:100%;
+    height:100%;
+    margin-top:-20px;
+    z-index: 10;
+    overflow: scroll;
+    position:fixed;
+    display:grid;
+}#signin_signup_form{
+    width:33%;
+    visibility: hidden;
+    display: none;
+    background-color: #fdfdf9;
+    height:90%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin:auto;
+    text-align:center;
+}#signin_signup_form >h2{
+    border-bottom: 1px solid black;
+}#exista{
+    text-decoration: none;
+    color:black;
+    background-color: #fdfdf9;
+}#top{
+    width:95%;
+    display:flex;
+    margin-top:20px;
+    justify-content: flex-end;
+    background-color: #fdfdf9;
+    font-size: 25px;
+}#signinp1{
+    font-family:Arial, Helvetica, sans-serif;
+    width:86%;
+    margin:auto;
+    padding:20px 0px;
+    padding-bottom: 10px;
+    background-color: #fdfdf9;
+    font-size: 25px;
+    font-weight: 500;
+    border-bottom:1px solid rgb(197, 197, 197);
+}#signinp2{
+    width:86%;
+    margin:auto;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin-top:20px;
+    font-size: 10px;
+    color:#5c5c5f;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    line-height: 2;
+    font-weight: 200;
+}#signinform{
+    width:86%;
+    padding:0px 32px;
+    text-align: start;
+margin:auto;
+}
+#signinemail{
+    text-align: start;
+    margin:auto;
+    margin-top:30px;
+    margin-bottom: 5px;
+    font-size: 13px;
+    font-family:Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    color:#444646;
+    text-align: start;
+}input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}#email{
+    width:96%;
+    font-size: 16px;
+    padding:12px 6px;
+    border-color: #167a92;
+    border-left:2px solid #167a92;
+    border-top: 2px solid #167a92;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #fdfdf9;
+    color:#959999;
+    letter-spacing: 1px;
+}.tick{
+    width: 86%;
+    display:flex;
+    gap:10px;
+}#tickp{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    color:#555757
+
+}#signininfo{
+    width:8%;
+    height:20px;
+
+}
+#signininfo:hover{
+    cursor:help;
+
+}#next{
+    margin-top:20px;
+    width:100%;
+    padding:10px 0px;
+    color:#fdfdf9; 
+    font-size: 14px;;
+    letter-spacing: 1px;
+    background-color: #4b5666;
+    border:1px solid #4b5666;
+}#mobilenumber{
+    margin-top:20px;
+    width:100%;
+    padding:10px 0px;
+    color:#4b5666; 
+    font-size: 14px;;
+    letter-spacing: 1px;
+    background-color:#fdfdf9;
+    border:1px solid #4b5666;
+    margin-bottom: 30px;;
+    border-bottom: 1px solid #4b5666;
+}#next:hover{
+    background-color: #fdfdf9;
+    color:#4b5666;
+    border:1px solid #4b5666
+
+}#mobilenumber:hover{
+    background-color: #4b5666;
+    color:#fdfdf9;
+}#signup1number{
+    font-family:Arial, Helvetica, sans-serif;
+    width:86%;
+    margin:auto;
+    padding:20px 0px;
+    background-color: #fdfdf9;
+    font-size: 25px;
+    font-weight: 500;
+    border-top: 1px solid #959999;
+
+}
+#signupp1{
+    font-family:Arial, Helvetica, sans-serif;
+    width:86%;
+    margin:auto;
+    padding:20px 0px;
+    background-color: #fdfdf9;
+    font-size: 25px;
+    font-weight: 500;
+}#signupp2{
+    width:86%;
+    margin:auto;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px;
+    color:#5c5c5f;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    line-height: 2;
+    font-weight: 200;
+}#createanaccount{
+    width:86%;
+    background-color: #fdfdf9;
+    color:#4b5666;
+    border:1px solid #4b5666;
+    font-size: 14px;;
+    letter-spacing: 1px;
+    margin:30px 0px;
+    padding:10px 0px;
+    margin-bottom:40px ;
+
+}#createanaccount:hover{
+    background-color: #4b5666;
+    color:#fdfdf9;
+
+}#signinnumber{
+    width:33%;
+    visibility: visible;
+    display: none;
+    background-color: #fdfdf9;
+    height:90%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin:auto;
+    text-align:center;
+}#signinnumber>h2{
+    border-bottom: 1px solid black;
+}#number{
+    width:96%;
+    font-size: 16px;
+    padding:12px 6px;
+    border-color: #167a92;
+    border-left:2px solid #167a92;
+    border-top: 2px solid #167a92;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #fdfdf9;
+    color:#959999;
+    letter-spacing: 1px;
+}#emailid{
+    margin-top:20px;
+    width:100%;
+    padding:10px 0px;
+    color:#4b5666; 
+    font-size: 14px;;
+    letter-spacing: 1px;
+    background-color:#fdfdf9;
+    border:1px solid #4b5666;
+    margin-bottom: 30px;;
+    border-bottom: 1px solid #4b5666;
+}#numbersignin{
+    text-align: start;
+    margin:auto;
+    margin-top:30px;
+    margin-bottom: 5px;
+    font-size: 13px;
+    font-family:Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    color:#444646;
+    text-align: start;
+}
+#signuppage{
+    width:33%;
+    visibility:visible;
+    background-color: #fdfdf9;
+    display:none;
+    height:90%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin:auto;
+    text-align:center;
+}#signuppage>h2{
+    border-bottom: 1px solid black;
+}#numbersignup{
+    text-align: start;
+    margin:auto;
+    margin-top:10px;
+    margin-bottom: 5px;
+    font-size: 13px;
+    font-family:Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    color:#444646;
+    text-align: start;
+}#signupnext{
+    display:flex;
+    gap:10px;
+    margin:20px 0px;
+}#ticksignup{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 11px;
+    word-spacing: 3px;
+    color:#676868;
+}#signupterms{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 11px;
+    word-spacing: 3px;
+    color:#676868;
+    padding-bottom: 30px;;
+    border-bottom:1px solid #959999
+
+}#signupterms a{
+    color:#0d93b4;
+}#signupsignin{
+    width:86%;
+    background-color: #fdfdf9;
+    color:#4b5666;
+    border:1px solid #4b5666;
+    font-size: 14px;;
+    letter-spacing: 1px;
+    padding:10px 0px;
+    margin-bottom:80px ;
+
+}#signupsignin:hover{
+    background-color: #4b5666;
+    color:#fdfdf9;
+
 }
