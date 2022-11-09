@@ -18,8 +18,8 @@
             signup.style.display="block"
 
         }
-        document.querySelector("createanaccount").addEventListener("click",signup)
-        function signup(){
+        document.querySelector("createanaccount").addEventListener("click",signupform)
+        function signupform(){
             signup.style.visibility="visible"
             signup.style.display="block"
             signin.style.visibility="hidden"
