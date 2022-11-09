@@ -3,7 +3,7 @@ body{
     padding: 0;
     margin: 0;
 }
-/* all images boxes on main home page */
+/* ********** images boxes on main home page ***************/
 #container{
     width: 92%;
     margin: auto;
@@ -41,7 +41,7 @@ body{
     width: 100%;
 }
 
-/* button on each image box */
+/************ button on each image box ****************/
 .box_button{
     position: relative;
     display: flex;
@@ -63,4 +63,60 @@ body{
 }
 .box_button>:last-child:hover{
     text-decoration: underline;
+}
+
+.explore{
+    margin-bottom: 50px;
+}
+.explore>h2{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    border-bottom: .1px solid rgb(219, 217, 217);
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+.explore>div{
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    gap: 30px;
+}
+.explore>div>div>img{
+    width: 100%;
+}
+.explore>div>div>h3{
+    font-size: 18px;
+    font-weight: 100;
+    color: rgb(27, 27, 27);
+}
+.explore>div>div>p{
+    font-weight: 100;
+    color: rgb(27, 27, 27);
+}
+.explore>div>div>a{
+    color: #167A92;
+}
+
+/********** slider section *************/
+.slider{
+    margin-bottom: 100px;
+}
+.slider>h3{
+    border-bottom: .1px solid rgb(219, 217, 217);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(31, 31, 31);
+}
+
+.slider>div{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 20px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+.slider>div>div{
+    cursor: pointer;
 }
