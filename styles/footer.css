@@ -1,0 +1,203 @@
+#about-us{
+    border-top: 1px solid rgba(229, 226, 222, 1);
+    width: 91%;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#about-us h2{
+    font-size:20px;
+    font-weight: 530;
+    color: rgba(38, 38, 44, 1);
+    font-family: Arial, Helvetica, sans-serif;
+}
+#about-us h4{
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:80;
+    line-height: 1.5;
+    color: rgba(38, 38, 44, 1);
+    
+    
+}
+#about-us button{
+    margin-top: -2px;
+    margin-left: -5px;
+    border: none;
+    background: none;
+    color: rgba(22, 122, 146, 1);
+    cursor: pointer;
+    letter-spacing: inherit;
+    text-align: left;
+    text-decoration: underline;
+    
+}
+#sign-up-for-email{
+    border-top: 1px solid rgba(229, 226, 222, 1);
+    background-color: rgba(247, 246, 242, 1);
+    margin-left: -8px;
+    margin-right: -8px;
+    padding-bottom: 30px;
+
+
+   
+}
+
+#sign-up-for-email>div{
+    
+      
+        width: 90%;
+        display: flex;
+        gap: 100px;
+        margin: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+       
+    
+}
+#sign-up-for-email>div>div{      
+    width: 100%;
+    margin: auto;
+   
+    
+}
+#sign-up-for-email h5{
+    
+      
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:80;
+    line-height: 1.5;
+    color: rgba(92, 92, 95, 1);
+   
+
+}
+
+#sign-up-for-email>div>div>h2{      
+    font-size:20px;
+    font-weight: 530;
+    color: rgba(38, 38, 44, 1);
+    font-family: Arial, Helvetica, sans-serif;
+}
+#sign-up-for-email>div>div>h4{      
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:80;
+    line-height: 1.5;
+    color: rgba(92, 92, 95, 1);
+}
+#sign-up-for-email p{ 
+    
+    width: 90%;
+    margin: auto;  
+    
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:80;
+    line-height: 1.5;
+    color: rgba(92, 92, 95, 1);
+}
+#link{
+    
+    border-top: 1px solid rgba(229, 226, 222, 1);
+    background-color: rgba(247, 246, 242, 1);
+    margin-left: -8px;
+    margin-right: -8px;
+   
+    
+}
+#links{
+    width: 75%;
+    background-color: rgba(247, 246, 242, 1);
+    margin: auto;
+    display: flex;
+    justify-content: space-around; 
+   
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+ }
+    #links div{
+        width: 30%;
+        line-height: 30px;
+     
+     
+       
+    
+    }
+    #links button{
+        border: 0;
+        background-color: rgba(247, 246, 242, 1);
+        text-align: left;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight:80;
+        line-height: 1.5;
+        color: rgba(92, 92, 95, 1);
+        cursor: pointer;
+    
+
+    }
+    #links h5{
+        margin-left: 9px;
+        font-size:14px;
+        font-weight: 500;
+        color: rgba(38, 38, 44, 1);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #links-social{
+        
+        background-color: rgba(247, 246, 242, 1);
+        margin-left: -8px;
+        margin-right: -8px;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+    #links-social>div{
+        width: 25%;
+        
+        
+        background-color: rgba(247, 246, 242, 1);
+        margin: auto;
+        padding-top: 50px;
+        margin-bottom: 20px;
+        padding-left: 50px;
+        display: flex;
+        justify-content: space-around; 
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        
+        
+    }
+    #links-social>div>img{
+        width: 25px;
+        cursor: pointer;
+    }
+    #country{
+        
+        background-color: rgba(247, 246, 242, 1);
+        margin-left: -8px;
+        margin-right: -8px;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+    #country>div{
+        width: 25%;
+        
+        margin: auto;
+        padding-top: 50px;
+        margin-bottom: 30px;
+      
+        
+        
+        
+        
+    }
+    #country button{
+        border: 0;
+        background-color: rgba(247, 246, 242, 1);
+        color: rgba(92, 92, 95, 1);
+        font-family: Arial, Helvetica, sans-serif;
+        cursor: pointer;
+    }
