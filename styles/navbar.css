@@ -63,7 +63,8 @@
 }
 /* added new id from here to popup for sign in*/
 #signin_signup_popup{
-        visibility: visible;
+        visibility: hidden;
+        /* change visibility to visible */
         width:100%;
         height:100%;
         margin-top:-30px;
