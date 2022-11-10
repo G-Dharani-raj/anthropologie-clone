@@ -1,0 +1,30 @@
+#categories {
+	display: grid;
+	grid-template-columns: repeat(4, 250px);
+	gap: 10px;
+	margin-left: 25%;
+}
+.category img {
+	width: 100%;
+}
+.category {
+	border-top: 1px solid black;
+	width: 100%;
+	position: relative;
+	text-align: center;
+	color: white;
+}
+
+.category h3 {
+	position: absolute;
+	top: 12%;
+	left: 20%;
+}
+.category:hover {
+	cursor: pointer;
+}
+
+#products {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
