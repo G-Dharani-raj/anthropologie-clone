@@ -80,6 +80,7 @@ const add_to_cart = () => {
 	let quantity = document.querySelector("#amount_of_products").value;
 	cart.push([selected_product, Number(quantity)]);
 	localStorage.setItem("cart_items", JSON.stringify(cart));
+	alert(`${selected_product.name} x${quantity} Have Been Added To Cart`);
 };
 
 // side bar recommendations only images
