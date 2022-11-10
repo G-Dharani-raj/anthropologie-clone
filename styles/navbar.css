@@ -1,13 +1,20 @@
  
 #first_navbar {
-    border: 1px solid black;
+    /* changed border to 0px */
+    border: 0px solid black;
     display: flex;
     justify-content: center;
     background-color: #AF2C2C;
 }
 
+/* added margin 0  */
+#first_navbar>a, #first_navbar>p{
+    margin: 0;
+}
+
 .first_navbar {
-    padding: 5px 15px;
+    /* updated padding */
+    padding: 10px 15px;
     color: #ffffff;
     font-size: 13px;
     font-family: Arial, Helvetica, sans-serif;
@@ -54,11 +61,14 @@
 #search_tab {
     display: flex;
     align-content: center;
-    justify-content: space-between;
+    /* removed space between */
+    /* justify-content: space-between; */
     padding-right: 30px;
     padding-left: 20px;
-    border-bottom: solid 1px rgb(198, 194, 194);
-
+    /* updated below all */
+    /* border-bottom: solid 1px rgb(198, 194, 194); */
+    width: 92%;
+    margin: auto;
 }
 
 #first {
@@ -71,9 +81,10 @@
 
 #a,
 #b {
-    height: 100%;
+    /* updated */
+    height: auto;
     display: flex;
-    margin-top: 23px;
+    /* margin-top: 23px; */
 
     padding: 0px 15px 0px 15px;
     align-items: center;
@@ -89,12 +100,21 @@
     border-top: solid 4px #167a92;
 }
 
+/* added */
+#a>h1{
+    padding-bottom: 4px;
+}
+/* added */
+#b>h1{
+    padding-top: 4px;
+}
+
 #last {
     display: flex;
-    margin: 10px;
+    /* updated */
+    margin: auto 0 auto auto;
     /* border: solid 1px red; */
     /* justify-content: center; */
-    margin-right: 70px;
     align-content: center;
     align-items: center;
     gap: 30px;
@@ -109,7 +129,8 @@
 
 #last1 {
     display: flex;
-    margin-top: 23px;
+    /* removed */
+    /* margin-top: 23px; */
 
     border: solid 1px #1d565d;
     color: #1d565d;
@@ -123,7 +144,8 @@
 }
 
 #search-box {
-    padding: 10px;
+    /* updated */
+    padding: 8px;
     /* border:solid 1px #1d565d; */
     color: #1d565d;
     border: none;
@@ -132,12 +154,14 @@
 #catogary_tab {
     display: flex;
     gap: 30px;
-    margin: 15px 15px;
+    /* updated */
+    margin: 15px auto;
     color: #26262c;
     font-family: 'Times New Roman', Times, serif;
     height: 100%;
     letter-spacing: .06rem;
-
+    /* added */
+    width: 92%;
 }
 
 #catogary_tab div:hover {
@@ -147,4 +171,7 @@
 
 hr {
     background-color: #f7f6f2;
+    /* added */
+    padding: 0;
+    margin: 0;
 } 

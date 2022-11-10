@@ -44,6 +44,7 @@ const navbar = () => {
 
     </div>
 </div>
+<hr>
 <div id="catogary_tab">
     <div>New!</div>
     <div>Dresses</div>
