@@ -1,7 +1,7 @@
 // Code here
 
 const navbar = () => {
-    return `    <div id="">
+	return `    <div id="">
     <div id="first_navbar">
         <p class="first_navbar">après all day, the Anthro way!</p>
         <p class="first_navbar" style=" color: white;;">GONE SKIING</p>
