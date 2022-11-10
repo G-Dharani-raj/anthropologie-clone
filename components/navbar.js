@@ -9,13 +9,142 @@ const navbar = () => {
     </div>
     <div id="language_tab">
         <div id="left"><button> English($)</button> </div>
-        <div id="right"> <a href="#"><button></a>
-            <a href="sign_in.html"> Sign In/ </a>
-            <a href="sign_in.html"> Sign Up </a>
+        <div id="right"><button id="rightbtn1"> 
+        <img id="signinimg"src="https://www.lifewatch.eu/wp-content/uploads/2021/07/user-icon.svg">
+           <p id="signin">Sign In / Sign Up</p>
             </button>
         </div>
     </div>
 </div>
+    <div id="signin_signup_popup">
+    <div id="signin_signup_form">
+        <div id="top">
+            <a id="exista"href="index.html"><span id="exist">&#10005;</span></a>
+        </div>
+        <p id="signinp1">Sign In</p>
+        <p id="signinp2">Sign in so you can save items to your wishlists, track your
+            orders, and check out faster!</p>
+            <form id="signinform">
+                <p id="signinemail">Email*</p>
+            <input type="email" id="email" placeholder="Enter your email">
+            <br>
+            <div class="tick">
+                <input type="checkbox" id="tick">
+                <lablel id="tickp"> keep me signed in</lablel>
+                <img id="signininfo"src="https://cdn-icons-png.flaticon.com/512/3665/3665921.png">
+           
+            </div>
+           <br>
+            
+            </form>
+            <button id="nextemail">NEXT</button>
+           <button id="mobilenumber">USE MOBILE NUMBER INSTEAD</button>
+            <p id="signup1number">Sign up</p>
+        <p id="signupp2">Welcome! It's quick and easy to set up an account</p>
+        <button id="createanaccount">CREATE AN ACCOUNT</button>
+    </div>
+    <div id="signinnumber">
+            <div id="top">
+                <a id="exista"href="index.html"><span id="exist">&#10005;</span></a>
+            </div>
+            <p id="signinp1">Sign In</p>
+            <p id="signinp2">Sign in so you can save items to your wishlists, track your
+                orders, and check out faster!</p>
+                <form id="signinform">
+                    <p id="numbersignin">Mobile Number*</p>
+                <input type="number" id="number" placeholder="Enter Number">
+                <div class="tick">
+                    <input type="checkbox" id="tick">
+                    <lablel id="tickp"> keep me signed in</lablel>
+                    <img id="signininfo"src="https://cdn-icons-png.flaticon.com/512/3665/3665921.png">
+                </div><br>
+                </form>
+                <button id="nextmobilenumber">NEXT</button>
+                <button id="emailid">USE EMAIL INSTEAD</button>
+                <p id="signup1number">Sign up</p>
+            <p id="signupp2">Welcome! It's quick and easy to set up an account</p>
+            <button id="createanaccount1">CREATE AN ACCOUNT</button>
+    </div>
+    <div id="signuppage">
+        <div id="top">
+            <a id="exista"href="index.html"><span id="exist">&#10005;</span></a>
+        </div>
+        <p id="signinp1">Create An Account</p>
+        <p id="signinp2">Welcome to Anthropologie! it's quick and easy to set up an account</p>
+            <form id="signinform">
+                <p id="numbersignin">Email*</p>
+            <input type="email" id="email" placeholder="Enter email">
+            <p id="numbersignup">Mobile Number *</p>
+            <input type="number" id="number" placeholder="Enter Number">
+            <br>
+            <div class="tick">
+                <input type="checkbox" id="tick">
+                <lablel id="tickp"> keep me signed in</lablel>
+                <img id="signininfo"src="https://cdn-icons-png.flaticon.com/512/3665/3665921.png">
+           
+            </div> <br>
+            </form>
+            <button id="nextsignuppage">NEXT</button>
+            <div id="signupnext">
+                <input type="checkbox" id="tick">
+            <label id="ticksignup">
+                Sign me up to receive Anthropologie offers, promotions and
+                other commercial messages. By creating an account,I agree to
+                Anthropologie's Terms of Service and Privacy Policy. I may
+                unsubscribe at any time. Creating an account will not enroll you
+                in SMS marketing.
+            </label>
+    
+            </div>
+            <p id="signupterms">By creating an account, you agree to Anthropologie's <a href="index.html">terms of use</a>
+                and <a href="index.html">privacy policy</a>. Landlines, VolP, and prepaid phones are not
+                supported. Standard message & data rates may apply. Message
+                frequency may vary. Reply HELP for help, and STOP to cancel.
+                <a href="index.html">Contact us</a> for more information.</p>
+            
+            <p id="Alreadyhave">Already Have an Account</p>
+        <button id="signupsignin">SIGN IN</button>
+    </div>
+    <div id="signinnumberpage">
+        <div id="top">
+            <a id="exista"href="index.html"><span id="exist">&#10005;</span></a>
+        </div>
+        <p id="signinp1">Finish Signing in</p>
+        <p id="signinp2">If your mobile number verified with us, you will recieve a one-time code sent</p>
+            <form id="signinform">
+                <p id="numbersignin">Mobile Number code*</p>
+            <input type="number" id="number" placeholder="enter code">
+             <br>
+             </form>
+            <button id="signinbuttonnumber">SIGN IN</button>
+            <button id="emailid1">USE EMAIL INSTEAD</button>
+            <p id="signupterms">By creating an account, you agree to Anthropologie's <a href="index.html">terms of use</a>
+            and <a href="index.html">privacy policy</a>. Landlines, VolP, and prepaid phones are not
+            supported. Standard message & data rates may apply. Message
+            frequency may vary. Reply HELP for help, and STOP to cancel.
+            <a href="index.html">Contact us</a> for more information.</p>
+    </div>
+    <div id="signinemailpage">
+        <div id="top">
+            <a id="exista"href="index.html"><span id="exist">&#10005;</span></a>
+        </div>
+        <p id="signinp1">Finish Signing in</p>
+        <p id="signinp2">If your Email verified with us, you will recieve a one-time code sent</p>
+            <form id="signinform">
+                <p id="numbersignin">Mobile Number code*</p>
+            <input type="number" id="number" placeholder="enter code">
+             <br>
+             </form>
+            <button id="signinbuttonemail">SIGN IN</button>
+            <button id="mobilenumber1">USE NUMBER INSTEAD</button>
+            <p id="signupterms">For more information <a href="index.html">terms of use</a>
+            and <a href="index.html">privacy policy</a>. Landlines, VolP, and prepaid phones are not
+            supported. Standard message & data rates may apply. Message
+            frequency may vary. Reply HELP for help, and STOP to cancel.
+            <a href="index.html">Contact us</a> for more information.</p>
+    </div>
+    
+    </div>
 
 <div id="search_tab">
     <div id="first">
