@@ -7,12 +7,95 @@ navbar_div.innerHTML = navbar();
 
 import { footer } from '/components/footer.js';
 
+
 let footer_div=document.getElementById('footer');
 footer_div.innerHTML=footer();
+/* added functionality to sign in sign up */
+    document.querySelector("#right").addEventListener("click",code)
+    document.querySelector("#emailid").addEventListener("click",code)
+document.querySelector("#signupsignin").addEventListener("click",code)
+document.querySelector("#mobilenumber").addEventListener("click",numbersignin)
+document.querySelector("#mobilenumber1").addEventListener("click",numbersignin)
+document.querySelector("#createanaccount").addEventListener("click",signuppage)
+document.querySelector("#createanaccount1").addEventListener("click",signuppage)
+document.querySelector("#nextemail").addEventListener("click",signinemail)
+document.querySelector("#nextmobilenumber").addEventListener("click",signinnumber)
+document.querySelector("#signinbuttonnumber").addEventListener("click",signinnumberprocess)
+document.querySelector("#signinbuttonemail").addEventListener("click",signinemailprocess)
+document.querySelector("#nextsignuppage").addEventListener("click",userdetails)
+let signemail=document.getElementById("signin_signup_form")
+    let signnumber=document.getElementById("signinnumber")
+        let signup=document.getElementById("signuppage");
+        let signinemails=document.getElementById("signinemailpage")
+      let signinnumbers=document.getElementById("signinnumberpage")
+        let container1=document.getElementById("container")
+        function code(){
+        footer_div.style.display="none"
+        container1.style.position="sticky"
+        container1.style.overflow="hidden"
+        container1.style.filter="blur(1px)"
+        signemail.style.display="block"
+        signnumber.style.display="none"
+      signup.style.display="none"
+      signinemails.style.display="none"
+      signinnumbers.style.display="none"      
+}
+function numbersignin(){
+  footer_div.style.display="none"
+  container1.style.position="sticky"
+  container1.style.overflow="hidden"
+  container1.style.filter="blur(1px)"
+  signemail.style.display="none"
+  signnumber.style.display="block"
+signup.style.display="none"
+signinemails.style.display="none"
+signinnumbers.style.display="none"
 
+}
 
+function signuppage(){
+  footer_div.style.display="none"
+        container1.style.position="sticky"
+        container1.style.overflow="hidden"
+        container1.style.filter="blur(1px)"
+        signemail.style.display="none"
+        signnumber.style.display="none"
+      signup.style.display="block"
+      signinemails.style.display="none"
+      signinnumbers.style.display="none"
+}
+function signinemail(){
+  footer_div.style.display="none"
+        container1.style.position="sticky"
+        container1.style.overflow="hidden"
+        container1.style.filter="blur(1px)"
+        signemail.style.display="none"
+        signnumber.style.display="none"
+      signup.style.display="none"
+      signinemails.style.display="block"
+      signinnumbers.style.display="none"
+}
+function signinnumber(){
+  footer_div.style.display="none"
+        container1.style.position="sticky"
+        container1.style.overflow="hidden"
+        container1.style.filter="blur(1px)"
+        signemail.style.display="none"
+        signnumber.style.display="none"
+      signup.style.display="none"
+      signinemails.style.display="none"
+      signinnumbers.style.display="block"
+}
+function userdetails(){
 
+}
+function signinemailprocess(){
 
+}
+function signinnumberprocess(){
+  
+}
+/*adding functionality end */
 
 // slider functionality
 let data = [

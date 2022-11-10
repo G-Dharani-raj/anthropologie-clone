@@ -10,21 +10,15 @@
 /* added margin 0  */
 #first_navbar>a, #first_navbar>p{
     margin: 0;
-}
-
-.first_navbar {
+}.first_navbar {
     /* updated padding */
     padding: 10px 15px;
     color: #ffffff;
     font-size: 13px;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-.first_navbar a {
+}.first_navbar a {
     color: #ffffff;
-}
-
-#language_tab {
+}#language_tab {
     background-color: #f7f6f2;
     border-bottom: 1px solid #f7f6f2;
     display: flex;
@@ -34,31 +28,462 @@
     justify-content: flex-end;
     padding-right: 50px;
     font-family: sans-serif;
-}
-
-#left button {
+}#left button {
     color: #167a92;
+    /* added background color */
+    background-color: #f7f6f2;
     border: none;
+}#right{
+    /* updated below all*/
+    display:flex;
+    width:15%;
+   color:#0d93b4;
+    gap:6px;
+}/* add hover */
+#right:hover{
+ filter: grayscale(100%);
+}#right button {
+    /* updated below all */
+    display:flex;
+    border:none;
+    background-color: #f7f6f2;
+    word-spacing: 2px;
+    color:#167a92;
+    gap:10px;
+    font-size: 13px;
+    cursor:pointer;
+    margin-top: -2px;
+   font-family:Helvetica;
+}/* added new #signinimg */
+#signinimg{
+    width:9%;
+}/* updated p below */
+#right p {
+    margin-top:2px;
 }
-
-#right button {
-
-    border: none;
-}
-
-#right a {
-    color: #167a92;
-    border: none;
-}
-
+/* added new id from here to popup for sign in*/
+#signin_signup_popup{
+        visibility: visible;
+        width:100%;
+        height:100%;
+        margin-top:-30px;
+        z-index: 10;
+        position:fixed;
+}#signin_signup_form{
+    width:35%;
+    visibility: visible;
+    display: none;
+    background-color: #fdfdf9;
+    height:86%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin:auto;
+    margin-top: 0px;
+    text-align:center;
+}#signin_signup_form >h2{
+    border-bottom: 1px solid black;
+}#exista{
+    text-decoration: none;
+    color:black;
+    background-color: #fdfdf9;
+}#top{
+    width:95%;
+    display:flex;
+    margin-top:20px;
+    justify-content: flex-end;
+    background-color: #fdfdf9;
+    font-size:30px;
+}#signinp1{
+    font-family:Arial;
+    width:86%;
+    margin:auto;
+    padding:20px 0px;
+    padding-bottom: 10px;
+    background-color: #fdfdf9;
+    font-size: 30px;
+    font-weight: 500;
+    border-bottom:1px solid rgb(197, 197, 197);
+}#signinp2{
+    width:86%;
+    margin:auto;
+    font-family:Verdana;
+    margin-top:20px;
+    font-size: 14px;
+    color:#5c5c5f;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    line-height: 2;
+    font-weight: 200;
+}#signinform{
+    width:86%;
+    padding:0px 32px;
+    text-align: start;
+margin:auto;
+}#signinemail{
+    text-align: start;
+    margin:auto;
+    margin-top:30px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-family:Arial;
+    letter-spacing: 1px;
+    color:#1b1b1b;
+    text-align: start;
+}input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}#email{
+    width:96%;
+    font-size: 18px;
+    padding:16px 6px;
+    border:3px solid #167a92;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #fdfdf9;
+    color:#959999;
+    letter-spacing: 1px;
+}.tick{
+    width: 86%;
+    display:flex;
+    gap:10px;
+}#tickp{
+    font-family:Verdana;
+    font-size: 16px;
+    color:#555757;
+}#signininfo{
+    width:7%;
+    height:20px;
+}#signininfo:hover{
+    cursor:help;
+}#next{
+    margin-top:20px;
+    width:86%;
+    padding:15px 0px;
+    color:#fdfdf9; 
+    font-size: 18px;
+    letter-spacing: 1px;
+    background-color: #4b5666;
+    border:1px solid #4b5666;
+}#nextemail{
+    margin-top:20px;
+    width:86%;
+    padding:15px 0px;
+    color:#fdfdf9; 
+    font-size: 18px;
+    letter-spacing: 1px;
+    background-color: #4b5666;
+    border:1px solid #4b5666;
+}#nextemail:hover{
+    background-color: #fdfdf9;
+    color:#4b5666;
+    border:1px solid #4b5666;
+}#nextmobilenumber{
+    margin:auto;
+    margin-top:20px;
+    width:86%;
+    padding:15px 0px;
+    color:#fdfdf9; 
+    font-size: 18px;
+    letter-spacing: 1px;
+    background-color: #4b5666;
+    border:1px solid #4b5666;
+}#nextmobilenumber:hover{
+    background-color: #fdfdf9;
+    color:#4b5666;
+    border:1px solid #4b5666;
+}#nextsignuppage{
+    margin-top:20px;
+    width:86%;
+    padding:15px 0px;
+    color:#fdfdf9; 
+    font-size: 18px;
+    letter-spacing: 1px;
+    background-color: #4b5666;
+    border:1px solid #4b5666;
+}#nextsignuppage:hover{
+    background-color: #fdfdf9;
+    color:#4b5666;
+    border:1px solid #4b5666;
+}#mobilenumber{
+    margin-top:20px;
+    width:86%;
+    padding:15px 0px;
+    color:#4b5666; 
+    font-size: 18px;
+    letter-spacing: 1px;
+    background-color:#fdfdf9;
+    border:1px solid #4b5666;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #4b5666;
+}#next:hover{
+    background-color: #fdfdf9;
+    color:#4b5666;
+    border:1px solid #4b5666;
+}#mobilenumber:hover{
+    background-color: #4b5666;
+    color:#fdfdf9;
+}#mobilenumber1{
+    margin-top:20px;
+    width:86%;
+    padding:15px 0px;
+    color:#4b5666; 
+    font-size: 18px;
+    letter-spacing: 1px;
+    background-color:#fdfdf9;
+    border:1px solid #4b5666;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #4b5666;
+}#mobilenumber1:hover{
+    background-color: #4b5666;
+    color:#fdfdf9;
+}#signup1number{
+    font-family:Arial;
+    width:86%;
+    margin:auto;
+    padding:20px 0px;
+    background-color: #fdfdf9;
+    font-size: 30px;
+    font-weight: 500;
+    border-top: 1px solid #959999;
+}#signupp1{
+    font-family:Arial;
+    width:86%;
+    margin:auto;
+    padding:20px 0px;
+    background-color: #fdfdf9;
+    font-size: 30px;
+    font-weight: 500;
+}#signupp2{
+    width:86%;
+    margin:auto;
+    font-family:Verdana;
+    font-size: 14px;
+    color:#5c5c5f;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    line-height: 2;
+    font-weight: 200;
+}#createanaccount{
+    width:86%;
+    background-color: #fdfdf9;
+    color:#4b5666;
+    border:1px solid #4b5666;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin:30px 0px;
+    padding:15px 0px;
+    margin-bottom:40px ;
+}#createanaccount:hover{
+    background-color: #4b5666;
+    color:#fdfdf9;
+}#createanaccount1{
+    width:86%;
+    background-color: #fdfdf9;
+    color:#4b5666;
+    border:1px solid #4b5666;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin:30px 0px;
+    padding:15px 0px;
+    margin-bottom:40px ;
+}#createanaccount1:hover{
+    background-color: #4b5666;
+    color:#fdfdf9;
+}#signinnumber{
+    width:35%;
+    visibility: visible;
+    display: none;
+    background-color: #fdfdf9;
+    height:83%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin:auto;
+    margin-top:0px;
+    text-align:center;
+}#signinnumber>h2{
+    border-bottom: 1px solid black;
+}#number{
+    width:96%;
+    font-size: 20px;
+    padding:12px 6px;
+    border:3px solid #167a92;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #fdfdf9;
+    color:#959999;
+    letter-spacing: 1px;
+}#emailid{
+    width:86%;
+    margin:auto;
+    margin-top:20px;
+    padding:15px 0px;
+    color:#4b5666; 
+    font-size: 18px;
+    letter-spacing: 1px;
+    background-color:#fdfdf9;
+    border:1px solid #4b5666;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #4b5666;
+}#emailid:hover{
+color:#fdfdf9;
+background-color: #4b5666;
+}#emailid1{
+    width:86%;
+    margin:auto;
+    margin-top:20px;
+    padding:15px 0px;
+    color:#4b5666; 
+    font-size: 18px;
+    letter-spacing: 1px;
+    background-color:#fdfdf9;
+    border:1px solid #4b5666;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #4b5666;
+}#emailid1:hover{
+color:#fdfdf9;
+background-color: #4b5666;
+}#numbersignin{
+    text-align: start;
+    margin:auto;
+    margin-top:30px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-family:Arial;
+    letter-spacing: 1px;
+    color:#444646;
+    text-align: start;
+}#signuppage{
+    width:35%;
+    visibility:visible;
+    background-color: #fdfdf9;
+    display:none;
+    height:84%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin:auto;
+    margin-top:0px;
+    text-align:center;
+}#signuppage>h2{
+    border-bottom: 1px solid black;
+}#numbersignup{
+    text-align: start;
+    margin:auto;
+    margin-top:10px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    color:#444646;
+    text-align: start;
+}#signupnext{
+    display:flex;
+    width:86%;
+    margin:auto;
+    gap:10px;
+    margin:30px auto;
+    text-align: start;
+}#ticksignup{
+    font-family:sans-serif;
+    font-size: 14px;
+    word-spacing: 3px;
+    color:#676868;
+}#Alreadyhave{
+    font-family:Arial;
+    width:86%;
+    margin:auto;
+    padding:20px 0px;
+    background-color: #fdfdf9;
+    font-size: 30px;
+    font-weight: 500;
+}#signupterms{
+    width:86%;
+    margin:auto;
+    text-align: start;
+    font-family:Tahoma,Verdana, sans-serif;
+    font-size: 14px;
+    word-spacing: 3px;
+    color:#676868;
+    padding-bottom: 30px;
+    border-bottom:1px solid #959999;
+}#signupterms a{
+    color:#0d93b4;
+}#signupsignin{
+    width:86%;
+    background-color: #fdfdf9;
+    color:#4b5666;
+    border:1px solid #4b5666;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding:15px 0px;
+    margin-bottom:80px ;
+}#signupsignin:hover{
+    background-color: #4b5666;
+    color:#fdfdf9;
+}#signinnumberpage{
+    width:35%;
+    visibility:visible;
+    background-color: #fdfdf9;
+    display:none;
+    height:85%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin:auto;
+    margin-top: 0px;
+    text-align:center;
+}#signuppage>h2{
+    border-bottom: 1px solid black;
+}#signinbuttonemail{
+    margin:auto;
+    margin-top:20px;
+    width:86%;
+    padding:15px 0px;
+    color:#fdfdf9; 
+    font-size: 18px;
+    letter-spacing: 1px;
+    background-color: #4b5666;
+    border:1px solid #4b5666;
+}#signinbuttonemail:hover{
+    background-color: #fdfdf9;
+    color:#4b5666;
+    border:1px solid #4b5666;
+}#signinbuttonnumber{
+    width:86%;
+    margin-top:20px;
+    width:86%;
+    padding:15px 0px;
+    color:#fdfdf9; 
+    font-size: 18px;
+    letter-spacing: 1px;
+    background-color: #4b5666;
+    border:1px solid #4b5666;
+}#signinbuttonemail:hover{
+    background-color: #fdfdf9;
+    color:#4b5666;
+    border:1px solid #4b5666;
+}#signinemailpage{
+    width:35%;
+    visibility:visible;
+    background-color: #fdfdf9;
+    display:none;
+    height:85%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin:auto;
+    margin-top: 0px;
+    text-align:center;
+}#signinnumberform{
+    width:76%;
+    padding:0px;
+    text-align: start;
+margin:auto;
+}/*adding id's for signin sign up  ends here */
 #search_tab-box {
     padding: 10px;
     /* border:solid 1px #1d565d; */
     color: #1d565d;
     border: none;
-}
-
-#search_tab {
+}#search_tab {
     display: flex;
     align-content: center;
     /* removed space between */
