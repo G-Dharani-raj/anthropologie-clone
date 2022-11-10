@@ -1,17 +1,42 @@
-const search_bar = document.querySelector("#search_bar");
+//import navbar and footer
+
+import { navbar } from "/components/navbar.js";
+
+let navbar_div = document.getElementById("navbar");
+navbar_div.innerHTML = navbar();
+
+import { footer } from "/components/footer.js";
+
+let footer_div = document.getElementById("footer");
+footer_div.innerHTML = footer();
+
+// Done importing
+
+const search_bar = document.querySelector("#search-box");
 const search = document.querySelector("#category_select");
 const results = document.querySelector("#results");
 const sorting = document.querySelector("#sort_price");
 let cart_items = JSON.parse(localStorage.getItem("cart_items")) || [];
 let timeout;
+let init_query = localStorage.getItem("query");
+
 search.onchange = () => {
 	debounce();
 };
 sorting.onchange = () => {
 	debounce();
 };
+
 const search_products = async () => {
-	let search_term = document.querySelector("#search_bar").value;
+	let search_term = document.querySelector("#search-box").value;
+	if (init_query) {
+		search_term = init_query;
+		console.log(search_term, `first`);
+		localStorage.setItem("query", null);
+		init_query = null;
+	} else if (init_query == null) {
+		console.log(search_term, "second");
+	}
 	let search_category =
 		document.querySelector("#category_select").value || "products";
 	document.querySelector(
@@ -24,8 +49,12 @@ const search_products = async () => {
 
 	let data = await res.json();
 	// console.log(data);
-	append(data);
-	sorting.selectedIndex = null;
+	if (data.length > 0) {
+		append(data);
+		sorting.selectedIndex = null;
+	} else {
+		results.innerText = "No results found";
+	}
 };
 
 const append = (data) => {
@@ -73,7 +102,7 @@ const debounce = () => {
 search_bar.oninput = () => {
 	debounce();
 };
-
+search_products();
 const all_products = document.querySelector("#all_products");
 all_products.onclick = () => {
 	localStorage.setItem("selection", "products");
@@ -107,3 +136,39 @@ const details = (element) => {
 	localStorage.setItem("selected_product", JSON.stringify(element));
 	window.location = "full_details.html";
 };
+
+// Switching between pages
+
+const products_cat = document.querySelector("#products_cat");
+
+products_cat.onclick = () => {
+	localStorage.setItem("selection", "products");
+	window.location = "all_products.html";
+};
+
+const dress_cat = document.querySelector("#dress_cat");
+
+dress_cat.onclick = () => {
+	localStorage.setItem("selection", "dress");
+	window.location = "all_products.html";
+};
+
+const clothing_cat = document.querySelector("#clothing_cat");
+
+clothing_cat.onclick = () => {
+	localStorage.setItem("selection", "clothing");
+	window.location = "all_products.html";
+};
+
+const shoes_cat = document.querySelector("#shoes_cat");
+
+shoes_cat.onclick = () => {
+	localStorage.setItem("selection", "shoes");
+	window.location = "all_products.html";
+};
+
+const cart_navbar_btn = document.querySelector("#cart-navbar-btn");
+cart_navbar_btn.onclick = () => {
+	window.location = "cart.html";
+};
+//Page switching ends

@@ -1,24 +1,34 @@
 #categories {
+	width: 60%;
 	display: grid;
-	grid-template-columns: repeat(4, 250px);
+	grid-template-columns: repeat(4, 1fr);
 	gap: 10px;
-	margin-left: 25%;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 .category img {
 	width: 100%;
 }
 .category {
-	border-top: 1px solid black;
 	width: 100%;
 	position: relative;
 	text-align: center;
 	color: white;
+	border-radius: 5px;
 }
 
-.category h3 {
-	position: absolute;
-	top: 12%;
-	left: 20%;
+#all_products {
+	background-image: url("https://images.ctfassets.net/5de70he6op10/7jG36MSbANK4JfVQhSjRtF/6426c0e02280da606c21e1ccef9fc2e5/Fall_Site_Topper_1_LS.jpg?w=630&q=80&fm=webp");
+}
+#dress {
+	background-image: url("https://images.ctfassets.net/5de70he6op10/558fy5SfamJIIkBQa3MARu/46185b890b51825214d5f74c4fbc9e8e/Fall_Site_Topper_2_LS.jpg?w=630&q=80&fm=webp");
+}
+#clothing {
+	background-image: url("https://images.ctfassets.net/5de70he6op10/2UDMcMxjbqwmwqFrGqKyz2/e4b6e269594e14ee1d677276b00fe4c4/Fall_Site_Topper_3_LS.jpg?w=630&q=80&fm=webp");
+}
+#shoes {
+	background-image: url("https://images.ctfassets.net/5de70he6op10/5v6fF2cEEnm45LRtoyYqNQ/63f35631b4ff5c6afeb1558a75b13967/Fall_Site_Topper_5_LS.jpg?w=630&q=80&fm=webp");
 }
 .category:hover {
 	cursor: pointer;
@@ -27,4 +37,28 @@
 #results {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
+	width: 70%;
+	margin: auto;
+	gap: 20px;
+}
+.card {
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+	width: 100%;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.card button {
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: gray;
+	border-radius: 5px;
+	border: none;
+	color: white;
+}
+.card button:hover {
+	background-color: black;
+	color: white;
 }
