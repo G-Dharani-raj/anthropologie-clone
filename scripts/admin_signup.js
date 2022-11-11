@@ -3,7 +3,7 @@ import { admin_signup } from "../components/admin_login_compo.js";
 function signupPage() {
   document.getElementById("container").innerHTML = admin_signup();
 }
-// signupPage()
+signupPage()
 
 //back to Wostyle button onclick
 document.getElementById("backtomain").onclick = () => {
@@ -115,23 +115,59 @@ if(!remainFlag){
         temp.innerText = "Password should be combination lower, upper, number and spacial character";
         temp.style.backgroundColor = "red";
     }else{
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         temp.innerText = "Registration successful! 🎉 redirecting...";
         temp.style.backgroundColor = "green";
+      try{
+        let res = await fetch(`https://damp-journey-38779.herokuapp.com/user/?id=${email}`)
+        let data = await res.json()
+        if(data.length != 0){
+          temp.innerText = "Account Already Created! Please Forget Password!";
+          temp.style.backgroundColor = "red";
+        }else{
+          setTimeout(async()=>{
+            let newData = {
+              "id": email,
+              "name": name,
+              "password": password,
+            }
+          
+          try{
+              res = await fetch(`https://damp-journey-38779.herokuapp.com/user/`, {
+              method: "POST",
+              body: JSON.stringify(newData),
+              headers: {
+                  'Content-Type': 'application/json',
+              }
+          })
+            
+            location.href = "/admin_login.html"
+            
+          }
+          catch(err){
+              console.log(err)
+          };
+          }, 2000)
+        }
+      }
+      catch(err){
+        console.log(err)
+    };
+        
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
     }
   }, 2000);
 }
