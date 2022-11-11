@@ -1,0 +1,19 @@
+{
+  "name": "acidic-blade-1610",
+  "version": "1.0.0",
+  "description": "group-project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/G-Dharani-raj/acidic-blade-1610.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/G-Dharani-raj/acidic-blade-1610/issues"
+  },
+  "homepage": "https://github.com/G-Dharani-raj/acidic-blade-1610#readme"
+}

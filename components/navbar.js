@@ -24,9 +24,9 @@ const navbar = () => {
         <p id="signinp1">Sign In</p>
         <p id="signinp2">Sign in so you can save items to your wishlists, track your
             orders, and check out faster!</p>
-            <form id="signinform">
+            <form id="signinformemail">
                 <p id="signinemail">Email*</p>
-            <input type="email" id="email" placeholder="Enter your email">
+            <input type="text" id="emailsignin" placeholder="Enter your email">
             <br>
             <div class="tick">
                 <input type="checkbox" id="tick">
@@ -42,7 +42,8 @@ const navbar = () => {
             <p id="signup1number">Sign up</p>
         <p id="signupp2">Welcome! It's quick and easy to set up an account</p>
         <button id="createanaccount">CREATE AN ACCOUNT</button>
-    </div>
+        <a href="admin.html"><button id="adminsigninlink">ADMIN SIGN IN</button></a>
+        </div>
     <div id="signinnumber">
             <div id="top">
                 <a id="exista"href="index.html"><span id="exist">&#10005;</span></a>
@@ -50,9 +51,9 @@ const navbar = () => {
             <p id="signinp1">Sign In</p>
             <p id="signinp2">Sign in so you can save items to your wishlists, track your
                 orders, and check out faster!</p>
-                <form id="signinform">
+                <form id="signinformnumber">
                     <p id="numbersignin">Mobile Number*</p>
-                <input type="number" id="number" placeholder="Enter Number">
+                <input type="number" id="enternumbersignin" placeholder="Enter Number">
                 <div class="tick">
                     <input type="checkbox" id="tick">
                     <lablel id="tickp"> keep me signed in</lablel>
@@ -64,18 +65,23 @@ const navbar = () => {
                 <p id="signup1number">Sign up</p>
             <p id="signupp2">Welcome! It's quick and easy to set up an account</p>
             <button id="createanaccount1">CREATE AN ACCOUNT</button>
-    </div>
+            <a href="admin.html"><button id="adminsigninlink">ADMIN SIGN IN</button></a>
+            </div>
     <div id="signuppage">
         <div id="top">
             <a id="exista"href="index.html"><span id="exist">&#10005;</span></a>
         </div>
         <p id="signinp1">Create An Account</p>
         <p id="signinp2">Welcome to Anthropologie! it's quick and easy to set up an account</p>
-            <form id="signinform">
+            <form id="signupform1">
                 <p id="numbersignin">Email*</p>
-            <input type="email" id="email" placeholder="Enter email">
+            <input type="text" id="emailsignup" placeholder="Enter email">
+            <p id="numbersignup">Username *</p>
+            <input type="text" id="namesignup" placeholder="Enter Text">
             <p id="numbersignup">Mobile Number *</p>
-            <input type="number" id="number" placeholder="Enter Number">
+            <input type="number" id="mobilenumbersignup" placeholder="Enter Number">
+            <p id="numbersignup">Password*</p>
+            <input type="text" id="passwordsignup" placeholder="Enter password">
             <br>
             <div class="tick">
                 <input type="checkbox" id="tick">
@@ -104,20 +110,22 @@ const navbar = () => {
             
             <p id="Alreadyhave">Already Have an Account</p>
         <button id="signupsignin">SIGN IN</button>
-    </div>
+        <a href="admin.html"><button id="adminsigninlink">ADMIN SIGN IN</button></a>
+        </div>
     <div id="signinnumberpage">
         <div id="top">
             <a id="exista"href="index.html"><span id="exist">&#10005;</span></a>
         </div>
         <p id="signinp1">Finish Signing in</p>
         <p id="signinp2">If your mobile number verified with us, you will recieve a one-time code sent</p>
-            <form id="signinform">
-                <p id="numbersignin">Mobile Number code*</p>
-            <input type="number" id="number" placeholder="enter code">
+            <form id="signinformnumberpage">
+                <p id="numbersigninp">Password *</p>
+            <input type="text" id="entersigninnumberpassword" placeholder="enter code">
              <br>
              </form>
             <button id="signinbuttonnumber">SIGN IN</button>
             <button id="emailid1">USE EMAIL INSTEAD</button>
+            <a href="admin.html"><button id="adminsigninlink">ADMIN SIGN IN</button></a>
             <p id="signupterms">By creating an account, you agree to Anthropologie's <a href="index.html">terms of use</a>
             and <a href="index.html">privacy policy</a>. Landlines, VolP, and prepaid phones are not
             supported. Standard message & data rates may apply. Message
@@ -130,13 +138,14 @@ const navbar = () => {
         </div>
         <p id="signinp1">Finish Signing in</p>
         <p id="signinp2">If your Email verified with us, you will recieve a one-time code sent</p>
-            <form id="signinform">
-                <p id="numbersignin">Mobile Number code*</p>
-            <input type="number" id="number" placeholder="enter code">
+            <form id="signinformemailpage">
+                <p id="emailsigninp">Password *</p>
+            <input type="text" id="emailsigninpassword" placeholder="enter password">
              <br>
              </form>
             <button id="signinbuttonemail">SIGN IN</button>
             <button id="mobilenumber1">USE NUMBER INSTEAD</button>
+            <a href="admin.html"><button id="adminsigninlink">ADMIN SIGN IN</button></a>
             <p id="signupterms">For more information <a href="index.html">terms of use</a>
             and <a href="index.html">privacy policy</a>. Landlines, VolP, and prepaid phones are not
             supported. Standard message & data rates may apply. Message
