@@ -1,3 +1,16 @@
+//import navbar and footer
+
+import { navbar } from "/components/navbar.js";
+
+let navbar_div = document.getElementById("navbar");
+navbar_div.innerHTML = navbar();
+
+import { footer } from "/components/footer.js";
+
+let footer_div = document.getElementById("footer");
+footer_div.innerHTML = footer();
+
+// Done importing
 const products = document.querySelector("#products");
 const sort_price = document.querySelector("#sort");
 let cart_items = JSON.parse(localStorage.getItem("cart_items")) || [];
@@ -93,3 +106,50 @@ const add_to_cart = (element) => {
 	cart_items.push([element, 1]);
 	localStorage.setItem("cart_items", JSON.stringify(cart_items));
 };
+
+// Switching between pages
+
+const products_cat = document.querySelector("#products_cat");
+
+products_cat.onclick = () => {
+	localStorage.setItem("selection", "products");
+	window.location = "all_products.html";
+};
+
+const dress_cat = document.querySelector("#dress_cat");
+
+dress_cat.onclick = () => {
+	localStorage.setItem("selection", "dress");
+	window.location = "all_products.html";
+};
+
+const clothing_cat = document.querySelector("#clothing_cat");
+
+clothing_cat.onclick = () => {
+	localStorage.setItem("selection", "clothing");
+	window.location = "all_products.html";
+};
+
+const shoes_cat = document.querySelector("#shoes_cat");
+
+shoes_cat.onclick = () => {
+	localStorage.setItem("selection", "shoes");
+	window.location = "all_products.html";
+};
+const cart_navbar_btn = document.querySelector("#cart-navbar-btn");
+cart_navbar_btn.onclick = () => {
+	window.location = "cart.html";
+};
+//Page switching ends
+
+//search redirect
+
+const search_bar = document.querySelector("#search-box");
+
+search_bar.addEventListener("keypress", (e) => {
+	if (e.key === "Enter") {
+		e.preventDefault();
+		localStorage.setItem("query", search_bar.value);
+		window.location = "search_page.html";
+	}
+});

@@ -1,3 +1,17 @@
+//import navbar and footer
+
+import { navbar } from "/components/navbar.js";
+
+let navbar_div = document.getElementById("navbar");
+navbar_div.innerHTML = navbar();
+
+import { footer } from "/components/footer.js";
+
+let footer_div = document.getElementById("footer");
+footer_div.innerHTML = footer();
+
+// Done importing
+
 let initial_cart = JSON.parse(localStorage.getItem("cart_items")) || [];
 
 const cart_display = (cart_items) => {
@@ -22,6 +36,9 @@ const cart_display = (cart_items) => {
 
 		let image = document.createElement("img");
 		image.src = product.image;
+		image.onclick = () => {
+			details(product);
+		};
 
 		let name = document.createElement("p");
 		name.innerText = product.name;
@@ -77,3 +94,53 @@ const remove_item = (element, index) => {
 		}
 	}
 };
+const details = (element) => {
+	localStorage.setItem("selected_product", JSON.stringify(element));
+	window.location = "full_details.html";
+};
+// Switching between pages
+
+const products_cat = document.querySelector("#products_cat");
+
+products_cat.onclick = () => {
+	localStorage.setItem("selection", "products");
+	window.location = "all_products.html";
+};
+
+const dress_cat = document.querySelector("#dress_cat");
+
+dress_cat.onclick = () => {
+	localStorage.setItem("selection", "dress");
+	window.location = "all_products.html";
+};
+
+const clothing_cat = document.querySelector("#clothing_cat");
+
+clothing_cat.onclick = () => {
+	localStorage.setItem("selection", "clothing");
+	window.location = "all_products.html";
+};
+
+const shoes_cat = document.querySelector("#shoes_cat");
+
+shoes_cat.onclick = () => {
+	localStorage.setItem("selection", "shoes");
+	window.location = "all_products.html";
+};
+const cart_navbar_btn = document.querySelector("#cart-navbar-btn");
+cart_navbar_btn.onclick = () => {
+	window.location = "cart.html";
+};
+//Page switching ends
+
+//search redirect
+
+const search_bar = document.querySelector("#search-box");
+
+search_bar.addEventListener("keypress", (e) => {
+	if (e.key === "Enter") {
+		e.preventDefault();
+		localStorage.setItem("query", search_bar.value);
+		window.location = "search_page.html";
+	}
+});

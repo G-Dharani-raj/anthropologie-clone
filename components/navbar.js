@@ -1,7 +1,7 @@
 // Code here
 
 const navbar = () => {
-    return `    <div id="">
+	return `    <div id="">
     <div id="first_navbar">
         <p class="first_navbar">après all day, the Anthro way!</p>
         <p class="first_navbar" style=" color: white;;">GONE SKIING</p>
@@ -178,16 +178,16 @@ const navbar = () => {
             <img src="https://cdn-icons-png.flaticon.com/512/54/54481.png" alt="">
         </div>
 
-        <img src="https://cdn-icons-png.flaticon.com/512/2956/2956820.png" alt="">
+        <img src="https://cdn-icons-png.flaticon.com/512/2956/2956820.png" alt="" id = "cart-navbar-btn" >
 
     </div>
 </div>
 <hr>
 <div id="catogary_tab">
-    <div>New!</div>
-    <div>Dresses</div>
-    <div>Clothing</div>
-    <div>Shoes</div>
+    <div id = "products_cat">New!</div>
+    <div id = "dress_cat">Dresses</div>
+    <div id = "clothing_cat">Clothing</div>
+    <div id = "shoes_cat">Shoes</div>
     <div>Accessories</div>
     <div>BHLDN Weddings</div>
     <div>Home & Furniture</div>
