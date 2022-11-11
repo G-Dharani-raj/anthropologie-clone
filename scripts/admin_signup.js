@@ -139,7 +139,9 @@ if(!remainFlag){
                   'Content-Type': 'application/json',
               }
           })
-            
+            let data = await res.json()
+            console.log(data)
+            console.log()
             location.href = "/admin_login.html"
             
           }
@@ -152,22 +154,15 @@ if(!remainFlag){
       catch(err){
         console.log(err)
     };
-        
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
     }
   }, 2000);
 }
+
+//already logged redirecting user to dashboard
+if(localStorage.getItem("admin_stay_logged") == "true"){
+  temp.innerText = "You are Already Logged! Redirecting...";
+  temp.style.backgroundColor = "green";
+  setTimeout(() => {
+      location.href = "/admin_dashboard.html"
+  }, 2000);
+};
