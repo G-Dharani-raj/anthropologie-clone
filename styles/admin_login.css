@@ -8,10 +8,21 @@ body{
     height: auto;
     margin: auto;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    padding: 20px;
-    margin-top: 50px;
+    padding: 50px 20px;
     border-radius: 20px;
-    background-color: #ffd54f;
+    background-color: #f2f4f8;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#admin_massage_signup{
+    width: 50%;
+    border-radius: 20px;
+    margin: auto;
+    text-align: center;
+    background-color: #ffe082;
 }
 
 h2{
@@ -27,7 +38,7 @@ h2{
     background-color:#ffe082;
     box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
     border-radius: 10px;
-    margin: 10px auto;
+    margin: 20px auto;
 
 }
 #email_admin:focus, #password_admin:focus, #admin_name:focus{
@@ -36,7 +47,7 @@ h2{
     background-color:#f7f7f7;
     box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 5px;
     border-radius: 10px;
-    margin: 5px auto;
+    margin: 20px auto;
     transition: .05s ease-out;
 }
 #checkbox_admin{
@@ -93,7 +104,7 @@ h2{
     cursor: pointer;
 }
 
-.backtomain{
+#backtomain{
     display: block;
     margin: 10px auto;
     padding: 7px 20px;
@@ -102,7 +113,7 @@ h2{
     border: .1px solid black;
     border-radius: 5px;
 }
-.backtomain:hover{
+#backtomain:hover{
     display: block;
     margin: 10px auto;
     padding: 7px 50px;
