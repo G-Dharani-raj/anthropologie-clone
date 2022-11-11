@@ -750,6 +750,12 @@ margin:auto;
     cursor: pointer;
 }
 
+/* updated the last hover effect */
+#catogary_tab > :last-child .dropdowns{
+    /* border: 1px solid red; */
+    right: -120px;
+}
+
 hr {
 	background-color: #f7f6f2;
 	/* added */
@@ -771,9 +777,9 @@ hr {
 
 .dropdowns{
     height: auto;
-    width: 240px;
+    width: 220px;
     position: absolute;
-    left: 0;
+    /* left: 0; */
     display: none;
 }
 
@@ -801,4 +807,6 @@ a:hover{
 .containers:hover .dropdowns{
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     display: block;
+    z-index: 1;
+    background-color: white;
 }
