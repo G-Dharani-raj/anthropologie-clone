@@ -1,7 +1,7 @@
 // Code here
 
 const navbar = () => {
-	return `    <div id="">
+    return `    <div id="">
     <div id="first_navbar">
         <p class="first_navbar">après all day, the Anthro way!</p>
         <p class="first_navbar" style=" color: white;;">GONE SKIING</p>
@@ -184,18 +184,185 @@ const navbar = () => {
 </div>
 <hr>
 <div id="catogary_tab">
-    <div id = "products_cat">New!</div>
-    <div id = "dress_cat">Dresses</div>
-    <div id = "clothing_cat">Clothing</div>
-    <div id = "shoes_cat">Shoes</div>
-    <div>Accessories</div>
-    <div>BHLDN Weddings</div>
-    <div>Home & Furniture</div>
-    <div>Beauty & Wellness</div>
-    <div>Garden & Outdoor</div>
-    <div>Sale</div>
-</div>
-<hr>`;
+
+<div class="containers">
+            <div id="products_cat">New!
+                <div class="dropdowns">
+                    <p>Shop By Catogory</p>
+                    <hr>
+                    <a href="#">Accessories</a>
+                    <a href="#">Beauty & Wellness</a>
+                    <a href="#">Clothing</a>
+                    <a href="#">Dresses</a>
+                    <a href="#">Home & Furniture</a>
+                    <a href="#">Jewelry</a>
+                    <a href="#">Petites</a>
+                    <a href="#">Plus</a>
+                    <a href="#">Shoes</a>
+                    <a href="#">BHLDN Weddings</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="containers">
+            <div id="dress_cat">Dresses
+                <div class="dropdowns">
+                    <p>Shop By Catogory</p>
+                    <hr>
+                    <a href="#">Shop All Dresses</a>
+                    <a href="#">New!</a>
+                    <a href="#">Top Rated Dresses</a>
+                    <a href="#">Occasion & Party Dresses</a>
+                    <a href="#">Lounge & Casual Dresses</a>
+                    <a href="#">Formal Dresses</a>
+                    <a href="#">Maxi Dresses</a>
+                    <a href="#">Mini & Tunic Dresses</a>
+                    <a href="#">Wedding Guest Dresses</a>
+                    <a href="#">Plus Dresses</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="containers">
+            <div id="clothing_cat">Clothing
+                <div class="dropdowns">
+                    <p>Shop By Catogory</p>
+                    <hr>
+                    <a href="#">Shop All Clothing</a>
+                    <a href="#">New!</a>
+                    <a href="#">Top Rated</a>
+                    <a href="#">Activewear</a>
+                    <a href="#">Blazers</a>
+                    <a href="#">Getaway & Resort Wear</a>
+                    <a href="#">Intimates & Lingerie</a>
+                    <a href="#">Jackets & Coats</a>
+                    <a href="#">Jeans</a>
+                    <a href="#">Jumpsuits</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="containers">
+            <div id="shoes_cat">Shoes
+                <div class="dropdowns">
+                    <p>Shop By Catogory</p>
+                    <hr>
+                    <a href="#">Shop All Shoes</a>
+                    <a href="#">New!</a>
+                    <a href="#">Boots & Booties</a>
+                    <a href="#">Cold Weather Boots</a>
+                    <a href="#">Flats</a>
+                    <a href="#">Heels & Wedges</a>
+                    <a href="#">Mules & Clogs</a>
+                    <a href="#">Sandals</a>
+                    <a href="#">Slippers</a>
+                    <a href="#">Sneakers</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="containers">
+            Accessories
+            <div class="dropdowns">
+                <p>Shop By Catogory</p>
+                <hr>
+                <a href="#">Shop All Accessories</a>
+                <a href="#">New!</a>
+                <a href="#">Top-Rated</a>
+                <a href="#">Bags & Small Accessories</a>
+                <a href="#">Belts</a>
+                <a href="#">Gloves</a>
+                <a href="#">Hair Accessories</a>
+                <a href="#">Hats</a>
+                <a href="#">Scarves</a>
+                <a href="#">Travel & Tech</a>
+            </div>
+        </div>
+
+        <div class="containers">
+            BHLDN Weddings
+            <div class="dropdowns">
+                <p>Shop By Catogory</p>
+                <hr>
+                <a href="#">Explore All BHLDN Weddings</a>
+                <a href="#">Book An Appointment</a>
+                <a href="#">Shop All Weddings</a>
+                <a href="#">New!</a>
+                <a href="#">Top-Rated Gowns</a>
+                <a href="#">Bride</a>
+                <a href="#">Wedding Dresses</a>
+                <a href="#">Bridesmaid Dresses</a>
+                <a href="#">Robe & Lingerie</a>
+                <a href="#">Mother of the Bride</a>
+            </div>
+        </div>
+
+        <div class="containers">
+            Home & Furniture
+            <div class="dropdowns">
+                <p>Shop By Catogory</p>
+                <hr>
+                <a href="#">Explore All Home & Furniture</a>
+                <a href="#">New!</a>
+                <a href="#">Bath</a>
+                <a href="#">Bedding</a>
+                <a href="#">Candles & Home Fragrance</a>
+                <a href="#">Decor</a>
+                <a href="#">Furniture</a>
+                <a href="#">Kids</a>
+                <a href="#">Kitchen & Dining</a>
+                <a href="#">Outdoor</a>
+            </div>
+        </div>
+
+        <div class="containers">
+            Beauty & Wellness
+            <div class="dropdowns">
+                <p>Shop By Catogory</p>
+                <hr>
+                <a href="#">Explore All Beauty & Wellness</a>
+                <a href="#">New!</a>
+                <a href="#">Top-Rated</a>
+                <a href="#">Beauty Gifts & Sets</a>
+                <a href="#">Candles & Home Fragrance</a>
+                <a href="#">Fragrance</a>
+                <a href="#">Bath & Body</a>
+                <a href="#">Makeup</a>
+                <a href="#">Nails</a>
+                <a href="#">Tools & Brushes</a>
+            </div>
+        </div>
+
+        <div class="containers">
+            Garden & Outdoor
+            <div class="dropdowns">
+                <p>Shop By Catogory</p>
+                <hr>
+                <a href="#">Shop All Garden & Outdoor</a>
+                <a href="#">Planters</a>
+                <a href="#">Garden & Utility</a>
+                <a href="#">Outdoor Living</a>
+                <a href="#">Plants & Flowers</a>
+                <a href="#">Furniture</a>
+            </div>
+        </div>
+
+        <div class="containers">
+            Sale
+            <div class="dropdowns">
+                <p>Shop By Catogory</p>
+                <hr>
+                <a href="#">Shop All Sale</a>
+                <a href="#">Freshly Cut</a>
+                <a href="#">Accessories</a>
+                <a href="#">Clothing</a>
+                <a href="#">Plus</a>
+                <a href="#">Furniture</a>
+            </div>
+        </div>
+
+    </div>
+    <hr>`;
 };
 
 export { navbar };

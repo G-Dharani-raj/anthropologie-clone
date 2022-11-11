@@ -1,3 +1,8 @@
+*{
+    box-sizing: border-box;
+    /* for the hover dropdown effect */
+ }
+
 #first_navbar {
 	/* changed border to 0px */
 	border: 0px solid black;
@@ -695,6 +700,11 @@ margin:auto;
 	width: 20px;
 	justify-content: center;
 }
+/* updated size of cart icon     */
+#last > img{
+    width: 30px;
+    cursor: pointer;
+}
 
 #last1 {
 	display: flex;
@@ -721,21 +731,23 @@ margin:auto;
 }
 
 #catogary_tab {
-	display: flex;
-	gap: 30px;
-	/* updated */
-	margin: 15px auto;
-	color: #26262c;
-	font-family: "Times New Roman", Times, serif;
-	height: 100%;
-	letter-spacing: 0.06rem;
-	/* added */
-	width: 92%;
+    /* border: 1px solid red; */
+    display: flex;
+    gap: 30px;
+    /* updated */
+    margin: 10px auto;
+    margin-bottom: 0%;
+    color: #26262c;
+    font-family: 'Times New Roman', Times, serif;
+    height: auto;
+    letter-spacing: .06rem;
+    /* added */
+    width: 90%;
 }
 
 #catogary_tab div:hover {
-	color: #046673;
-	cursor: pointer;
+    color: #046673;
+    cursor: pointer;
 }
 
 hr {
@@ -743,4 +755,50 @@ hr {
 	/* added */
 	padding: 0;
 	margin: 0;
+}
+
+/* hover dropdown css part below */
+.containers{
+    /* border: 1px solid red; */
+    height: 30px;
+    /* width: 80px; */
+    position: relative;
+    /* text-align: center; */
+    line-height: 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.dropdowns{
+    height: auto;
+    width: 240px;
+    position: absolute;
+    left: 0;
+    display: none;
+}
+
+.dropdowns hr{
+    width: 90%;
+    margin: auto;
+}
+.dropdowns p{
+    color:#444646;
+    padding-left: 10px;
+}
+
+a{
+    color: #444646;
+    display: block;
+    text-align: left;
+    padding-left: 10px ;
+    font-size: 15px;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline ;
+}
+
+.containers:hover .dropdowns{
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    display: block;
 }
