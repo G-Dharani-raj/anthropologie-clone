@@ -1,0 +1,128 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+#container{
+    width: 35%;
+    height: auto;
+    margin: auto;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 20px;
+    background-color: #ffd54f;
+}
+
+h2{
+    text-align: center;
+    font-weight: 200;
+}
+#email_admin, #password_admin, #admin_name{
+    display: block;
+    width: 80%;
+    padding: 7px 10px;
+    outline: none;
+    border: 0px solid red;
+    background-color:#ffe082;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    border-radius: 10px;
+    margin: 10px auto;
+
+}
+#email_admin:focus, #password_admin:focus, #admin_name:focus{
+    width: 90%;
+    border: 0px solid red;
+    background-color:#f7f7f7;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 5px;
+    border-radius: 10px;
+    margin: 5px auto;
+    transition: .05s ease-out;
+}
+#checkbox_admin{
+    margin-left: 10%;
+}
+#login_button_admin, #signup_button_admin{
+    display: block;
+    margin: 10px auto;
+    padding: 7px 20px;
+    background-color: #ff6f00;
+    transition: .05s ease-out;
+    border: .1px solid black;
+    border-radius: 5px;
+}
+#login_button_admin:hover, #signup_button_admin:hover{
+    display: block;
+    margin: 10px auto;
+    padding: 7px 50px;
+    background-color: #388E3C;
+    cursor: pointer;
+    color: aliceblue;
+}
+
+#forget_create{
+    display: flex;
+    justify-content: space-between;
+    color: rgb(83, 83, 83);
+    font-style: italic;
+    font-size: .9rem;
+    margin: 0;
+    padding: 0;
+    border-bottom: .5px solid gray;
+    padding-bottom: 5px;
+    margin-bottom: 10px
+}
+#forget_admin{
+    border-radius: 10px;
+    margin: 0;
+    padding: 1px 4px;
+}
+#forget_admin:hover{
+    background-color: red;
+    color: aliceblue;
+    cursor: pointer;
+}
+#create_admin, #login_admin{
+    border-radius: 10px;
+    margin: 0;
+    padding: 1px 4px;
+}
+#create_admin:hover, #login_admin:hover{
+    background-color: green;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.backtomain{
+    display: block;
+    margin: 10px auto;
+    padding: 7px 20px;
+    background-color: #ff6f00;
+    transition: .05s ease-out;
+    border: .1px solid black;
+    border-radius: 5px;
+}
+.backtomain:hover{
+    display: block;
+    margin: 10px auto;
+    padding: 7px 50px;
+    background-color: #25e02e;
+    cursor: pointer;
+    color: gray;
+}
+#back_to_wostyle{
+    color: rgb(231, 235, 238);
+}
+
+#admin_login_container>p{
+    font-size: .8rem;
+    padding: 0;
+    margin: 0;
+}
+#pripolicy, #terms{
+    color: #0000EE;
+}
+#pripolicy:hover, #terms:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
