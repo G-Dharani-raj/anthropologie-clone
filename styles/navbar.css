@@ -40,7 +40,7 @@
    color:#0d93b4;
     gap:6px;
 }/* add hover */
-#right:hover{
+#rightbtn1:hover{
  filter: grayscale(100%);
 }#right button {
     /* updated below all */
@@ -50,16 +50,18 @@
     word-spacing: 2px;
     color:#167a92;
     gap:10px;
+    position:absolute;
     font-size: 13px;
     cursor:pointer;
     margin-top: -2px;
    font-family:Helvetica;
 }/* added new #signinimg */
 #signinimg{
-    width:9%;
+    width:8%;
 }/* updated p below */
 #right p {
-    margin-top:2px;
+    margin-top:2.5px;
+    margin-bottom: -1px;
 }
 /* added new id from here to popup for sign in*/
 #signin_signup_popup{
@@ -98,10 +100,10 @@
     font-family:Arial;
     width:86%;
     margin:auto;
-    padding:20px 0px;
+    padding:16px 6px;
     padding-bottom: 10px;
     background-color: #fdfdf9;
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 500;
     border-bottom:1px solid rgb(197, 197, 197);
 }#signinp2{
@@ -109,32 +111,84 @@
     margin:auto;
     font-family:Verdana;
     margin-top:20px;
-    font-size: 14px;
+    font-size: 12px;
     color:#5c5c5f;
     word-spacing: 2px;
     letter-spacing: 1px;
     line-height: 2;
     font-weight: 200;
-}#signinform{
+}/* updated forms id's */
+#signinformemail{
     width:86%;
     padding:0px 32px;
     text-align: start;
 margin:auto;
+}#signinformnumber{
+    width:86%;
+    padding:0px 32px;
+    text-align: start;
+margin:auto;
+}#signupform1{
+    width:86%;
+    padding:0px 32px;
+    text-align: start;
+margin:auto;
+}#signinformnumberpage{
+    width:86%;
+    padding:0px 32px;
+    text-align: start;
+margin:auto;
+}#signinformemailpage{
+    width:86%;
+    padding:0px 32px;
+    text-align: start;
+     margin:auto;
 }#signinemail{
     text-align: start;
     margin:auto;
     margin-top:30px;
     margin-bottom: 5px;
-    font-size: 18px;
+    font-size: 16px;
     font-family:Arial;
     letter-spacing: 1px;
     color:#1b1b1b;
     text-align: start;
+}#emailsigninpassword{
+    width:96%;
+    font-size: 18px;
+    padding:14px 6px;
+    border:3px solid #167a92;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #fdfdf9;
+    color:#959999;
+    letter-spacing: 1px;
 }input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}#email{
+}
+#emailsignin{
+    width:96%;
+    font-size: 18px;
+    padding:14px 6px;
+    border:2px solid #167a92;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #fdfdf9;
+    color:#959999;
+    letter-spacing: 1px;
+}#enternumbersignin{
+    width:96%;
+    font-size: 18px;
+    padding:16px 6px;
+    border:2px solid #167a92;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #fdfdf9;
+    color:#959999;
+    letter-spacing: 1px;
+}#entersigninnumberpassword{
     width:96%;
     font-size: 18px;
     padding:16px 6px;
@@ -144,7 +198,18 @@ input::-webkit-inner-spin-button {
     background-color: #fdfdf9;
     color:#959999;
     letter-spacing: 1px;
-}.tick{
+}#passwordsignin{
+    width:96%;
+    font-size: 18px;
+    padding:16px 6px;
+    border:3px solid #167a92;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #fdfdf9;
+    color:#959999;
+   letter-spacing: 1px;
+}/* added new id's form id's end here modified if some already present data*/
+.tick{
     width: 86%;
     display:flex;
     gap:10px;
@@ -196,9 +261,9 @@ input::-webkit-inner-spin-button {
 }#nextsignuppage{
     margin-top:20px;
     width:86%;
-    padding:15px 0px;
+    padding:16px 0px;
     color:#fdfdf9; 
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 1px;
     background-color: #4b5666;
     border:1px solid #4b5666;
@@ -244,7 +309,7 @@ input::-webkit-inner-spin-button {
     margin:auto;
     padding:20px 0px;
     background-color: #fdfdf9;
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 500;
     border-top: 1px solid #959999;
 }#signupp1{
@@ -253,7 +318,7 @@ input::-webkit-inner-spin-button {
     margin:auto;
     padding:20px 0px;
     background-color: #fdfdf9;
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 500;
 }#signupp2{
     width:86%;
@@ -278,7 +343,21 @@ input::-webkit-inner-spin-button {
 }#createanaccount:hover{
     background-color: #4b5666;
     color:#fdfdf9;
-}#createanaccount1{
+}/* added new button id below*/
+#adminsigninlink{
+    width:86%;
+    background-color: #4b5666;
+    color:#fdfdf9;
+    border:1px solid #4b5666;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding:15px 0px;
+    margin-bottom:40px ;
+}#adminsigninlink:hover{
+    background-color: #fdfdf9;
+    color:#4b5666;
+}/*upto here  */
+#createanaccount1{
     width:86%;
     background-color: #fdfdf9;
     color:#4b5666;
@@ -306,8 +385,8 @@ input::-webkit-inner-spin-button {
     border-bottom: 1px solid black;
 }#number{
     width:96%;
-    font-size: 20px;
-    padding:12px 6px;
+    font-size: 18px;
+    padding:14px 6px;
     border:3px solid #167a92;
     border-radius: 5px;
     margin-bottom: 10px;
@@ -333,7 +412,7 @@ background-color: #4b5666;
     width:86%;
     margin:auto;
     margin-top:20px;
-    padding:15px 0px;
+    padding:15px 6px;
     color:#4b5666; 
     font-size: 18px;
     letter-spacing: 1px;
@@ -345,6 +424,26 @@ background-color: #4b5666;
 color:#fdfdf9;
 background-color: #4b5666;
 }#numbersignin{
+    text-align: start;
+    margin:auto;
+    margin-top:30px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-family:Arial;
+    letter-spacing: 1px;
+    color:#444646;
+    text-align: start;
+}#numbersigninp{
+    text-align: start;
+    margin:auto;
+    margin-top:30px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-family:Arial;
+    letter-spacing: 1px;
+    color:#444646;
+    text-align: start;
+}#emailsigninp{
     text-align: start;
     margin:auto;
     margin-top:30px;
@@ -372,7 +471,7 @@ background-color: #4b5666;
     margin:auto;
     margin-top:10px;
     margin-bottom: 5px;
-    font-size: 18px;
+    font-size: 16px;
     font-family:Arial, Helvetica, sans-serif;
     letter-spacing: 1px;
     color:#444646;
@@ -402,7 +501,7 @@ background-color: #4b5666;
     margin:auto;
     text-align: start;
     font-family:Tahoma,Verdana, sans-serif;
-    font-size: 14px;
+    font-size: 18px;
     word-spacing: 3px;
     color:#676868;
     padding-bottom: 30px;
@@ -479,6 +578,50 @@ background-color: #4b5666;
     text-align: start;
 margin:auto;
 }/*adding id's for signin sign up  ends here */
+/* adding new id for sign functionality */
+#emailsignup{
+    width:96%;
+    font-size: 18px;
+    padding:14px 6px;
+    border:2px solid #167a92;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #fdfdf9;
+    color:#959999;
+    letter-spacing: 1px;
+}#namesignup{
+    width:96%;
+    font-size: 18px;
+    padding:14px 6px;
+    border:2px solid #167a92;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #fdfdf9;
+    color:#959999;
+    letter-spacing: 1px;
+}#mobilenumbersignup{
+    width:96%;
+    font-size: 18px;
+    padding:14px 6px;
+    border:2px solid #167a92;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #fdfdf9;
+    color:#959999;
+    letter-spacing: 1px;
+}#passwordsignup{
+    width:96%;
+    font-size: 18px;
+    padding:14px 6px;
+    border:2px solid #167a92;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #fdfdf9;
+    color:#959999;
+    letter-spacing: 1px;
+}
+
+/* end adding new id's */
 #search_tab-box {
     padding: 10px;
     /* border:solid 1px #1d565d; */
