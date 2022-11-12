@@ -14,12 +14,32 @@
 		<div id="navbar"></div>
 
 		<!-- cart items -->
-
-		<div id="cart"></div>
-		<div>
-			<h1 id="cart_total"></h1>
+		<div id="total_cart">
+			<div id="cart"></div>
+			<!-- <div>
+				<h3>
+					Order Summary
+					<hr />
+				</h3>
+				<p>Order Total $<span id="cart_total"></span>.0</p>
+				<p>Delivery Charges <span>TBD</span></p>
+				<p>Tax <span>5%</span></p>
+			</div> -->
+			<div id="right_summary">
+				<h2>Order Summary</h2>
+				<div class="checkout-total">
+					<ul>
+						<li>Subtotal $<span id="cart_total"></span>.0</li>
+						<li>Shipping <span>100</span></li>
+						<li>Estimated Tax <span>0.00</span></li>
+						<li>Total <span>1287</span></li>
+					</ul>
+					<button>SHIP TO THIS ADDRESS</button>
+					<hr />
+					<button>Promo Code</button>
+				</div>
+			</div>
 		</div>
-
 		<!-- Footer -->
 		<div id="footer"></div>
 	</body>
