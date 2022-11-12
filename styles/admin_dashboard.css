@@ -1,0 +1,135 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+h2{
+    text-align: center;
+}
+#add_prodcut{
+    display: flex;
+    margin: 20px;
+}
+#add_prodcut>input, #add_prodcut>button, #add_prodcut>select{
+    margin: 10px;
+    padding: 8px;
+}
+
+#dashboard_prodadded_massage{
+    background-color: green;
+    border-radius: 10px;
+    
+}
+
+#list_prod_dashboard{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+}
+#list_prod_dashboard>div{
+    display: flex;
+    height: 150px;
+    padding: 25px;
+    border-radius: 20px;
+    /* justify-content: space-between; */
+    margin: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#list_prod_dashboard>div>div>h3, #list_prod_dashboard>div>div>h5{
+    margin: 5px 10px;
+    font-size: 20px;
+}
+.delete_butt_admin_dashboard{
+    display: block;
+}
+.dashboard_addprod_buttons{
+    margin-left: auto;
+}
+.dashboard_addprod_buttons>:first-child{
+    padding: 5px 30%;
+    margin-bottom: 50px;
+    border: none;
+    background-color: red;
+    border-radius: 3px;
+}
+.dashboard_addprod_buttons>:first-child:hover{
+    background-color: rgb(179, 0, 0);
+    color: white;
+    cursor: pointer;
+}
+.dashboard_addprod_buttons>:last-child{
+    width: 50%;
+    padding: 5px;
+    border: none;
+    background-color: green;
+}
+.dashboard_addprod_buttons>:last-child:hover{
+    cursor: pointer;
+    background-color: rgb(0, 87, 0);
+}
+.dashboard_addprod_buttons>input{
+    padding: 5px;
+    display: block;
+    outline: none;
+    border-color: green;
+}
+/* .upadtebutt{
+    padding: 0, 50px;
+} */
+
+#admin_navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #FF9E80;
+    align-items: center;
+}
+#admin_navbar>div{
+    padding: 15px;
+    margin: 0;
+}
+#admin_navbar>:nth-child(2)>h2{
+    padding: 0;
+    margin: 0;
+}
+#admin_navbar>:first-child{
+
+}
+#admin_navbar>:first-child>a{
+    text-decoration: none;
+    color: rgb(25, 102, 15);
+    padding-right: 15px;
+    font-size: 20px;
+    margin: 0 5px;
+}
+#admin_navbar>:first-child>:first-child{
+    text-decoration: underline;
+    color: rgb(44, 31, 31);
+    padding: 7px 10px;
+    background-color: beige;
+    border-radius: 5px;
+}
+#admin_navbar>:first-child>:last-child{
+    padding: 7px 10px;
+}
+#admin_navbar>:first-child>:last-child:hover{
+    text-decoration: underline;
+    color: rgb(44, 31, 31);
+    padding: 7px 10px;
+    background-color: beige;
+    border-radius: 5px;
+}
+#admin_navbar>div>button{
+    padding: 7px 20px;
+    background-color: #ff6f00;
+    transition: .5s ease-out;
+    border: .1px solid black;
+    border-radius: 5px;
+}
+#admin_navbar>div>button:hover{
+    background-color: #388E3C;
+    cursor: pointer;
+    color: aliceblue;
+}
+
+
+
+
