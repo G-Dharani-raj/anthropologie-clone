@@ -78,8 +78,8 @@
         position:fixed;
 }#signin_signup_form{
     width:35%;
-    visibility: visible;
-    display: none;
+    visibility:visible;
+    display:none;
     background-color: #fdfdf9;
     height:86%;
     overflow-y: scroll;
@@ -670,7 +670,7 @@ margin:auto;
 	justify-content: center;
 }
 
-#a {
+#a{
 	border-top: solid 4px #167a92;
 }
 
@@ -762,7 +762,39 @@ hr {
 	padding: 0;
 	margin: 0;
 }
+/* momin user dashboard css*/
+/* adding dropdown for sign out in user dashboard */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    visibility:hidden;
+    display: none;
+    font-size: 12px;
+    padding-top:10px;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    text-align:start;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 10;
+  }
+  
+  .dropdown-content a {
+    color:#676868;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover a:hover {text-decoration: underline;}
 
+/* vedant's hover down css */
 /* hover dropdown css part below */
 .containers{
     /* border: 1px solid red; */
@@ -810,3 +842,4 @@ a:hover{
     z-index: 1;
     background-color: white;
 }
+
