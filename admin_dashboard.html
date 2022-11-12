@@ -5,8 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard || Costyle</title>
+    <link rel="stylesheet" href="./styles/admin_dashboard.css">
 </head>
 <body>
-    <h1>Admin Dashboard</h1>
+    <div id="admin_dashboard_container">
+        <div id="admin_navbar">
+            <div>
+                <a href="/admin_dashboard.html">Cloths</a>
+                <a href="/admin_shoes.html">Shoes</a>
+            </div>
+            <div>
+                <h2>WoStyle Dashboard</h2>
+            </div>
+            <div>
+                <button id="backtomain_dashboard">Back to <span id="back_to_wostyle">wostyle.com</span></button>
+                <button id="admin_logout">logout</button>
+            </div>
+        </div>
+        <div id="add_prodcut">
+            <input type="text" name="name" id="dashboard_addprod_name" placeholder="Name">
+            <input type="number" name="price" id="price_addprod" placeholder="price">
+            <select name="category" id="category_admin_addprod">
+                <option value="">select category</option>
+                <option value="dress">Dress</option>
+                <option value="shoes">Shoes</option>
+                <option value="dress">Clohting</option>
+            </select>
+            <input type="url" name="url_dashboard" id="image_dashboard_addprod" placeholder="Image URL">
+            <button id="addprod_button_dashboard">Add Product</button>
+            <p id="dashboard_prodadded_massage"></p>
+        </div>
+        <div id="list_prod_dashboard"></div>
+        
+    </div>
+
+    <!-- script -->
+    <script src="./scripts/admin_dashboard.js"></script>
 </body>
 </html>

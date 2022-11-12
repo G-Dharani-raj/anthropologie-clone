@@ -141,7 +141,7 @@ if(!remainFlag){
           })
             let data = await res.json()
             console.log(data)
-            console.log()
+            localStorage.removeItem('admin_stay_logged')
             location.href = "/admin_login.html"
             
           }
