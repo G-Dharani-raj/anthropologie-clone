@@ -12,6 +12,7 @@ const navbar = () => {
         <div id="right"><button id="rightbtn1"> 
         <img id="signinimg"src="https://www.lifewatch.eu/wp-content/uploads/2021/07/user-icon.svg">
            <p id="signin">Sign In / Sign Up</p>
+           
             </button>
         </div>
     </div>
@@ -42,7 +43,7 @@ const navbar = () => {
             <p id="signup1number">Sign up</p>
         <p id="signupp2">Welcome! It's quick and easy to set up an account</p>
         <button id="createanaccount">CREATE AN ACCOUNT</button>
-        <a href="admin.html"><button id="adminsigninlink">ADMIN SIGN IN</button></a>
+        <a href="admin_login.html"><button id="adminsigninlink">ADMIN SIGN IN</button></a>
         </div>
     <div id="signinnumber">
             <div id="top">
@@ -152,13 +153,13 @@ const navbar = () => {
             frequency may vary. Reply HELP for help, and STOP to cancel.
             <a href="index.html">Contact us</a> for more information.</p>
     </div>
-    
+
     </div>
 
 <div id="search_tab">
     <div id="first">
         <div id="a">
-            <h1> <a href="index.html">
+            <h1> <a id="anchor_a" href="index.html">
                     <img
                         src="https://images.ctfassets.net/5de70he6op10/53ZOE4rRqrxcvv0hg2eSLV/a849085e5f600c618132be2475017746/anthro-logo.svg">
                 </a>
