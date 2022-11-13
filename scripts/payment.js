@@ -45,10 +45,6 @@ function openPopup(event){
 
 let customerData=JSON.parse(localStorage.getItem("customer_data"))||[];
 
-// document.getElementsByClassName("submit-btn").addEventListener("click",closePopup)
-// function closePopup(event){
-//     event.preventDefault();
-//     window.location.replace(index.html);
-// }
+
 
 

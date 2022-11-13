@@ -46,9 +46,9 @@
 #right {
 	/* updated below all*/
 	display: flex;
-	width: 15%;
+	width: 13%;
 	color: #0d93b4;
-	gap: 6px;
+	gap: 0px;
 } /* add hover */
 #rightbtn1:hover {
 	filter: grayscale(100%);
@@ -405,8 +405,8 @@ input::-webkit-inner-spin-button {
 } /* added new button id below*/
 /* Changed the dimensions of the admin button */
 #adminsigninlink {
-	width: 88.5%;
-	margin-left: 20px;
+	width: 88%;
+	margin-left: 24px;
 	background-color: #4b5666;
 	color: #fdfdf9;
 	border: 1px solid #4b5666;
