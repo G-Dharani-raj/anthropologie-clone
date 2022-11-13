@@ -393,6 +393,7 @@ else if(emails.includes("@gmail.com")&&usernames!=""&&mobiles.length>9&&password
   }
   arr.push(obj)
   localStorage.setItem("userdata",JSON.stringify(arr))
+  localStorage.setItem("signup",JSON.stringify("successfull"))
 alert("Sign Up successfully")
 document.getElementById("signin").innerText="Sign in"
 location.reload()
@@ -477,7 +478,7 @@ path.append(img,div1)
 document.getElementById("signin_signup_popup").innerHTML=""
 }else{
 	document.getElementById("anchor_a").href="index.html"
-}if("unsuccessfull"==JSON.parse(localStorage.getItem("signin"))){
+}if("unsuccessfull"==JSON.parse(localStorage.getItem("signin"))||"successfull"==JSON.parse(localStorage.setItem("successfull"))){
 	document.getElementById("signin").innerText="Sign in"
 }
 

@@ -359,6 +359,7 @@ else if(emails.includes("@gmail.com")&&usernames!=""&&mobiles.length>9&&password
   }
   arr.push(obj)
   localStorage.setItem("userdata",JSON.stringify(arr))
+  localStorage.setItem("signup",JSON.stringify("successful"))
 alert("Sign Up successfully")
 document.getElementById("signin").innerText="Sign in"
 location.reload()
@@ -454,7 +455,7 @@ let cart_show_btn=JSON.parse(localStorage.getItem("cart_show_btn"))||0
 if(cart_show_btn>0){
 	document.getElementById("dropup_content").style.display="block"
 	document.getElementById("addingnumber").innerText=cart_show_btn
-}if("unsuccessfull"==JSON.parse(localStorage.getItem("signin"))){
+}if("unsuccessfull"==JSON.parse(localStorage.getItem("signin"))||"successfull"==JSON.parse(localStorage.setItem("successfull"))){
 	document.getElementById("signin").innerText="Sign in"
 }
 

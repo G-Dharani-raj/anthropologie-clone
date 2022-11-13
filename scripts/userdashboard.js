@@ -189,7 +189,7 @@ div1.append(a,div2)
 path.append(img,div1)
 }else{
 	document.getElementById("anchor_a").href="index.html"
-}if("unsuccessfull"==JSON.parse(localStorage.getItem("signin"))){
+}if("unsuccessfull"==JSON.parse(localStorage.getItem("signin"))||"successfull"==JSON.parse(localStorage.setItem("successfull"))){
 	document.getElementById("signin").innerText="Sign in"
 }
 
