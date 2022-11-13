@@ -13,10 +13,11 @@ footer_div.innerHTML = footer();
 // Done importing
 
 let initial_cart = JSON.parse(localStorage.getItem("cart_items")) || [];
-
+let cart_show_btn=JSON.parse(localStorage.getItem("cart_show_btn")) || 0;
 const cart_display = (cart_items) => {
 	let cart_total = 0;
 	document.getElementById("cart").innerHTML = "";
+
 	cart_items = JSON.parse(localStorage.getItem("cart_items")) || [];
 	if (cart_items.length == 0) {
 		console.log("cart empty");
@@ -40,6 +41,7 @@ const cart_display = (cart_items) => {
 			details(product);
 		};
 
+
 		let name = document.createElement("p");
 		name.innerText = product.name;
 
@@ -55,6 +57,9 @@ const cart_display = (cart_items) => {
 		let remove_btn = document.createElement("button");
 		remove_btn.innerText = "Remove from cart";
 		remove_btn.onclick = () => {
+			let cart_show_btn=JSON.parse(localStorage.getItem("cart_show_btn"))||0;
+			let count =cart_show_btn-1
+			display_number(count);
 			remove_item(element, index);
 		};
 
@@ -98,6 +103,16 @@ const details = (element) => {
 	localStorage.setItem("selected_product", JSON.stringify(element));
 	window.location = "full_details.html";
 };
+const display_number=(count)=>{
+	document.getElementById("addingnumber").innerText=count;
+	if(count>0){
+		document.getElementById("dropup_content").style.display="block"
+	}else{
+		document.getElementById("dropup_content").style.display="none"
+	}
+	localStorage.setItem("cart_show_btn",JSON.stringify(count))
+	
+}
 // Switching between pages
 
 const products_cat = document.querySelector("#products_cat");
@@ -145,7 +160,10 @@ search_bar.addEventListener("keypress", (e) => {
 	}
 });
 /* added functionality to sign in sign up */
-
+if(cart_show_btn>0){
+	document.getElementById("addingnumber").innerText=cart_show_btn;
+	document.getElementById("dropup_content").style.display="block"
+}
 
 document.querySelector("#right").addEventListener("click",code)
 document.querySelector("#emailid").addEventListener("click",code)
@@ -210,66 +228,104 @@ signinnumbers.style.display = "none";
 }
 
 function signinemail(){
-/* added new userdata useremail */
-let userdata=JSON.parse(localStorage.getItem("userdata"))
-let useremail=userdata[0]["email"]
-
-if(document.getElementById("emailsignin").value==useremail){
-/* removed footer_div */
-
-container1.style.position="sticky"
-container1.style.overflow="hidden"
-container1.style.filter="blur(1px)"
+	/* added new userdata useremail */
+	let userdata=JSON.parse(localStorage.getItem("userdata"))||[{email:0}]
+	let useremail=userdata[0]["email"]
+	
+	/*removed foooter_div.style */
+	if(useremail==0){
+		document.getElementById("signinemail").innerText="Email not registered"
+		document.getElementById("emailsignin").placeholder="create an account"
+		document.getElementById("emailsignin").style.color="red"
+		document.getElementById("signinemail").style.color="red"
+		document.getElementById("emailsignin").style.borderColor="red"
+		
+	}	 else if(document.getElementById("emailsignin").value==useremail){
+		container1.style.position="sticky"
+		container1.style.overflow="hidden"
+		container1.style.filter="blur(1px)"
+		signemail.style.display="none"
+		signnumber.style.display="none"
+	  signup.style.display="none"
+	  signinemails.style.display="block"
+	  signinnumbers.style.display="none"
+	}else{
+		document.getElementById("signinemail").innerText="Enter correct email"
+		document.getElementById("emailsignin").placeholder="Enter registered email"
+	document.getElementById("signinemail").style.color="red"
+	document.getElementById("emailsignin").style.borderColor="red"
+	
+	
+	}
+	}
+function signinnumber(){
+	/* added new userdata usernumber */
+	let userdata=JSON.parse(localStorage.getItem("userdata"))||[{mobile:0}]
+	let usernumber=userdata[0]["mobile"]
+	console.log(usernumber)
+	
+	
+	if(usernumber===0){
+		document.getElementById("enternumbersignin").placeholder="create an account"
+		document.getElementById("enternumbersignin").style.color="red"
+		document.getElementById("numbersignin").innerText="Number Not Registered"
+		document.getElementById("numbersignin").style.color="red"
+		document.getElementById("enternumbersignin").style.borderColor="red"
+		
+	}
+	else if(document.getElementById("enternumbersignin").value==usernumber){
+	 /*removed foooter_div.style */
+	container1.style.position="sticky"
+	container1.style.overflow="hidden"
+	container1.style.filter="blur(1px)"
 	signemail.style.display="none"
 	signnumber.style.display="none"
-  signup.style.display="none"
-  signinemails.style.display="block"
-  signinnumbers.style.display="none"
-}else{
-document.getElementById("signinemail").innerText="Enter correct email"
-document.getElementById("signinemail").style.color="red"
-document.getElementById("emailsignin").style.borderColor="red"
-
-
-}
-}
-function signinnumber(){
-/* added new userdata usernumber */
-let userdata=JSON.parse(localStorage.getItem("userdata"))
-let usernumber=userdata[0]["mobile"]
-if(document.getElementById("enternumbersignin").value==usernumber){
-/* removed footer_div */
-
-container1.style.position="sticky"
-container1.style.overflow="hidden"
-container1.style.filter="blur(1px)"
-signemail.style.display="none"
-signnumber.style.display="none"
-signup.style.display="none"
-signinemails.style.display="none"
-signinnumbers.style.display="block"
-}else{
-  document.getElementById("numbersignin").innerText="Enter correct number"
-document.getElementById("numbersignin").style.color="red"
-document.getElementById("enternumbersignin").style.borderColor="red"
-
-
-}
-
-}/* updated below functionality */
+	signup.style.display="none"
+	signinemails.style.display="none"
+	signinnumbers.style.display="block"
+	}else{
+	  document.getElementById("numbersignin").innerText="Enter correct number"
+	document.getElementById("numbersignin").style.color="red"
+	document.getElementById("enternumbersignin").placeholder="Enter register number"
+	document.getElementById("enternumbersignin").style.borderColor="red"
+	
+	
+	}
+	
+	}/* updated below functionality */
 function userdetails(){
 /* added arr variable */
 let arr=JSON.parse(localStorage.getItem("userdata"))||[];
-const reg_form=document.getElementById('signupform1')
-const emails=reg_form.emailsignup.value
-const usernames=reg_form.namesignup.value
-const mobiles=reg_form.mobilenumbersignup.value
-const passwords=reg_form.passwordsignup.value   
- if(emails==emails.includes('@')||usernames==""||mobiles==""||passwords==""){
-  alert("sign Up unsuccessfull please enter details again")
+let emails=document.getElementById("emailsignup").value 
+let usernames=document.getElementById("namesignup").value 
+let mobiles=document.getElementById("mobilenumbersignup").value 
+let passwords=document.getElementById("passwordsignup").value 
+
+ if(!emails.includes("@gmail.com")){
+  document.getElementById("emailsignuppp11").innerText="Entered wrong email"
+  document.getElementById("emailsignuppp11").style.color="red"
+  document.getElementById("emailsignup").placeholder="Email must contain name@gmail.com"
+  document.getElementById("emailsignup").style.borderColor="red"
+} if(usernames==""){
+	document.getElementById("usernamesignupp11").innerText="Entered empty username "
+  document.getElementById("usernamesignupp11").style.color="red"
+  document.getElementById("namesignup").placeholder="Username can't be empty"
+  document.getElementById("namesignup").style.borderColor="red"
+
+}  if(mobiles.length<9||mobiles.length==0){
+	document.getElementById("mobilesignupp11").innerText="Entered wrong number"
+	document.getElementById("mobilesignupp11").style.color="red"
+	document.getElementById("mobilenumbersignup").placeholder="Number must be above 9 digits"
+	document.getElementById("mobilenumbersignup").style.borderColor="red"
+}if(passwords.length<4||passwords.length==0){
+	document.getElementById("passwordsignupp11").innerText="Entered wrong password"
+	document.getElementById("passwordsignupp11").style.color="red"
+	document.getElementById("passwordsignup").placeholder="Password must be above 5 digits"
+	document.getElementById("passwordsignup").style.borderColor="red"
+
 }
 
-else{
+else if(emails.includes("@gmail.com")&&usernames!=""&&mobiles.length>9&&passwords.length>4){
   let obj={
 	email:emails,
 	username:usernames,
@@ -278,7 +334,8 @@ else{
   }
   arr.push(obj)
   localStorage.setItem("userdata",JSON.stringify(arr))
-alert("Sign Up successfully press sign in below button ")
+alert("Sign Up successfull press sign in below button ")
+window.location="cart.html"
 }
 }
 function signinbuttonemail(){
@@ -288,9 +345,12 @@ let userpassword=userdata[0]["password"]
 
 if(document.getElementById("emailsigninpassword").value==userpassword){
 alert("Sign in successfull")
-window.location="userdashboard.html"
+localStorage.setItem("signin",JSON.stringify("successfull"))
+window.location="index.html"
+
 }else{
 document.getElementById("emailsigninpassword").style.borderColor="red"
+document.getElementById("emailsigninpassword").placeholder="enter registered password"
 document.getElementById("emailsigninp").style.color="red"
 document.getElementById("emailsigninp").innerText="Enter correct password"
 }
@@ -304,9 +364,11 @@ let userpassword=userdata[0]["password"]
 
 if(document.getElementById("entersigninnumberpassword").value==userpassword){
 alert("Sign in successfull")
-window.location="useddashboard.html"
+localStorage.setItem("signin",JSON.stringify("successfull"))
+window.location="index.html"
 }else{
 document.getElementById("entersigninnumberpassword").style.borderColor="red"
+document.getElementById("entersigninnumberpassword").placeholder="enter registered password"
 document.getElementById("numbersigninp").innerText="Enter corret password"
 document.getElementById("numbersigninp").style.color="red"
 }
@@ -316,7 +378,7 @@ document.getElementById("numbersigninp").style.color="red"
 const success=JSON.parse(localStorage.getItem("signin"))
 const nameshow=JSON.parse(localStorage.getItem("userdata"))
 if(success=="successfull"){
-	document.getElementById("anchor_a").href="userdashboard.html"
+	document.getElementById("anchor_a").href="index.html"
 	document.getElementById("signin").innerText=""
     document.getElementById("right").innerHTML=""
 	let path=document.getElementById("right")
@@ -349,7 +411,17 @@ div1.append(a,div2)
 path.append(img,div1)
 }else{
 	document.getElementById("anchor_a").href="index.html"
-}document.querySelector("leavesignin").addEventListener("click",coder)
+}
+//added if to show how many items in cart
+if(cart_show_btn>0){
+	document.getElementById("addingnumber").innerText=cart_show_btn;
+	document.getElementById("dropup_content").style.display="block"
+}
+if("successfull"===JSON.parse(localStorage.getItem("signin"))){
+	const nameshow=JSON.parse(localStorage.getItem("userdata"))
+	document.getElementById("signin").innerText=nameshow[0]["username"]
+}
+document.querySelector("leavesignin").addEventListener("click",coder)
 function coder(){
 	alert("sign out successfull")
 	localStorage.setItem("signin",JSON.stringify("unsuccessfull"))
@@ -360,3 +432,4 @@ function coder(){
 
 
 /*adding functionality end */
+// added new cart_show_btn 
