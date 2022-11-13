@@ -132,3 +132,50 @@ function checkPromo(e) {
 		alert("Promo code already applied");
 	}
 }
+
+// Switching between pages
+
+const products_cat = document.querySelector("#products_cat");
+
+products_cat.onclick = () => {
+	localStorage.setItem("selection", "products");
+	window.location = "all_products.html";
+};
+
+const dress_cat = document.querySelector("#dress_cat");
+
+dress_cat.onclick = () => {
+	localStorage.setItem("selection", "dress");
+	window.location = "all_products.html";
+};
+
+const clothing_cat = document.querySelector("#clothing_cat");
+
+clothing_cat.onclick = () => {
+	localStorage.setItem("selection", "clothing");
+	window.location = "all_products.html";
+};
+
+const shoes_cat = document.querySelector("#shoes_cat");
+
+shoes_cat.onclick = () => {
+	localStorage.setItem("selection", "shoes");
+	window.location = "all_products.html";
+};
+const cart_navbar_btn = document.querySelector("#cart-navbar-btn");
+cart_navbar_btn.onclick = () => {
+	window.location = "cart.html";
+};
+//Page switching ends
+
+//search redirect
+
+const search_bar = document.querySelector("#search-box");
+
+search_bar.addEventListener("keypress", (e) => {
+	if (e.key === "Enter") {
+		e.preventDefault();
+		localStorage.setItem("query", search_bar.value);
+		window.location = "search_page.html";
+	}
+});
