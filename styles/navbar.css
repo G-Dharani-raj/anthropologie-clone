@@ -798,7 +798,6 @@ input::-webkit-inner-spin-button {
 
 #first {
 	display: flex;
-
 	height: 60px;
 	align-content: center;
 	justify-content: space-around;
@@ -834,6 +833,7 @@ input::-webkit-inner-spin-button {
 }
 
 #last {
+	display: 2px solid blue;
 	display: flex;
 	/* updated */
 	margin: auto 0 auto auto;
@@ -903,7 +903,7 @@ input::-webkit-inner-spin-button {
 /* updated the last hover effect */
 #catogary_tab > :last-child .dropdowns {
 	/* border: 1px solid red; */
-	right: -120px;
+	right: -110px;
 }
 
 hr {
@@ -980,13 +980,13 @@ hr {
 	position: relative;
 	/* text-align: center; */
 	line-height: 30px;
-	font-size: 16px;
+	font-size: 15px;
 	cursor: pointer;
 }
 
 .dropdowns {
 	height: auto;
-	width: 220px;
+	width: 250px;
 	position: absolute;
 	/* left: 0; */
 	display: none;
@@ -1018,4 +1018,52 @@ a:hover {
 	display: block;
 	z-index: 1;
 	background-color: white;
+}
+
+/********** Media queries below *************/
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+	#catogary_tab {
+		display: none;
+	}
+}
+@media all and (min-width: 320px) and (max-width: 767px) {
+	#catogary_tab {
+		display: none;
+	}	 
+}
+
+@media all and (min-width: 820px) and (max-width: 1024px) {
+	#search_tab {
+		display: flex;
+		align-content: center;
+		width: 95%;
+	}
+}
+
+@media all and (min-width: 360px) and (max-width: 767px) {
+	#search_tab {
+		display: grid;
+		align-content: center;
+		width: 90%;
+	}	 
+
+	#first {
+		display: flex;
+		height: 60px;
+		width: 90%;
+	}
+
+	#last {
+		display: flex;
+		width: 100%;
+	}
+
+	#last1 {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		justify-content: space-between;
+	}
+
 }
