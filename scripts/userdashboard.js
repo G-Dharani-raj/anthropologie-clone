@@ -102,7 +102,7 @@ const cart_display = (cart_items) => {
 			
 		};
 		td6.append(remove_btn)
-		tr.append(td1,td3,td4,td5,td6)
+		tr.append(td1,td2,td3,td4,td5,td6)
 		document.querySelector("#table").append(tr)
 	});
 
@@ -140,6 +140,10 @@ const display_number=(count)=>{
 	
 }
 /* added drop-down menu in user dashboard starts here*/
+if(cart_show_btn>0){
+	document.getElementById("addingnumber").innerText=cart_show_btn;
+	document.getElementById("dropup_content").style.display="block"
+}
 const success=JSON.parse(localStorage.getItem("signin"))
 const nameshow=JSON.parse(localStorage.getItem("userdata"))
 if(success=="successfull"){
