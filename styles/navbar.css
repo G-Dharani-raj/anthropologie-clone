@@ -61,6 +61,7 @@
 	word-spacing: 2px;
 	color: #167a92;
 	gap: 10px;
+	
 	position: absolute;
 	font-size: 13px;
 	cursor: pointer;
@@ -82,6 +83,7 @@
 	height: 100%;
 	margin-top: -30px;
 	z-index: 10;
+    overflow-x:hidden;
 	position: fixed;
 }
 #signin_signup_form {
@@ -136,31 +138,36 @@
 	font-weight: 200;
 } /* updated forms id's */
 #signinformemail {
-	width: 86%;
+    /*changed width 86% to 100%*/
+	width: 100%;
 	padding: 0px 32px;
 	text-align: start;
 	margin: auto;
 }
 #signinformnumber {
-	width: 86%;
+     /*changed width 86% to 100%*/
+
+	width: 100%;
 	padding: 0px 32px;
 	text-align: start;
 	margin: auto;
 }
 #signupform1 {
-	width: 86%;
+     /*changed width 86% to 100%*/
+	width: 100%;
 	padding: 0px 32px;
 	text-align: start;
 	margin: auto;
 }
 #signinformnumberpage {
-	width: 86%;
+     /*changed width 86% to 100%*/
+	width: 100%;
 	padding: 0px 32px;
 	text-align: start;
 	margin: auto;
 }
 #signinformemailpage {
-	width: 86%;
+	width: 100%;
 	padding: 0px 32px;
 	text-align: start;
 	margin: auto;
@@ -177,7 +184,8 @@
 	text-align: start;
 }
 #emailsigninpassword {
-	width: 96%;
+    /* changed width to 100% */
+	width: 100%;
 	font-size: 18px;
 	padding: 14px 6px;
 	border: 3px solid #167a92;
@@ -193,7 +201,8 @@ input::-webkit-inner-spin-button {
 	margin: 0;
 }
 #emailsignin {
-	width: 96%;
+    /*changed width 98% to 100% */
+	width: 100%;
 	font-size: 18px;
 	padding: 14px 6px;
 	border: 2px solid #167a92;
@@ -204,7 +213,8 @@ input::-webkit-inner-spin-button {
 	letter-spacing: 1px;
 }
 #enternumbersignin {
-	width: 96%;
+	 /* changed width to 100% */
+     width: 100%;
 	font-size: 18px;
 	padding: 16px 6px;
 	border: 2px solid #167a92;
@@ -215,7 +225,8 @@ input::-webkit-inner-spin-button {
 	letter-spacing: 1px;
 }
 #entersigninnumberpassword {
-	width: 96%;
+	 /* changed width to 100% */
+     width: 100%;
 	font-size: 18px;
 	padding: 16px 6px;
 	border: 3px solid #167a92;
@@ -226,7 +237,8 @@ input::-webkit-inner-spin-button {
 	letter-spacing: 1px;
 }
 #passwordsignin {
-	width: 96%;
+	 /* changed width to 100% */
+     width: 100%;
 	font-size: 18px;
 	padding: 16px 6px;
 	border: 3px solid #167a92;
@@ -393,8 +405,8 @@ input::-webkit-inner-spin-button {
 } /* added new button id below*/
 /* Changed the dimensions of the admin button */
 #adminsigninlink {
-	width: 88%;
-	margin-left: 30px;
+	width: 88.5%;
+	margin-left: 20px;
 	background-color: #4b5666;
 	color: #fdfdf9;
 	border: 1px solid #4b5666;
@@ -503,6 +515,47 @@ input::-webkit-inner-spin-button {
 	letter-spacing: 1px;
 	color: #444646;
 	text-align: start;
+}#emailsignuppp11{
+	text-align: start;
+	margin: auto;
+	margin-top: 30px;
+	margin-bottom: 5px;
+	font-size: 16px;
+	font-family: Arial;
+	letter-spacing: 1px;
+	color: #444646;
+	text-align: start;
+}#usernamesignupp11{
+	text-align: start;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	font-size: 16px;
+	font-family: Arial;
+	letter-spacing: 1px;
+	color: #444646;
+	text-align: start;
+}#mobilesignupp11{
+	text-align: start;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	font-size: 16px;
+	font-family: Arial;
+	letter-spacing: 1px;
+	color: #444646;
+	text-align: start;
+}#passwordsignupp11{
+	text-align: start;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	font-size: 16px;
+	font-family: Arial;
+	letter-spacing: 1px;
+	color: #444646;
+	text-align: start;
+
 }
 #emailsigninp {
 	text-align: start;
@@ -563,19 +616,34 @@ input::-webkit-inner-spin-button {
 	background-color: #fdfdf9;
 	font-size: 30px;
 	font-weight: 500;
-}
+}/* updated signupterms size */
 #signupterms {
 	width: 86%;
 	margin: auto;
 	text-align: start;
 	font-family: Tahoma, Verdana, sans-serif;
-	font-size: 18px;
+	font-size: 15px;
 	word-spacing: 3px;
 	color: #676868;
-	padding-bottom: 30px;
-	border-bottom: 1px solid #959999;
+    /*changed pad botm to 10px removed borderbotom */
+	padding-bottom: 10px;
+
+}/* added new termses */
+#termses{
+    width:86%;
+    display:flex;
+    margin:auto;
+    padding-right:20px;
+    text-align: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    border-bottom: 1px solid #959999;
 }
-#signupterms a {
+#termses a {
+    font-size:18px;
 	color: #0d93b4;
 }
 #signupsignin {
@@ -659,7 +727,8 @@ input::-webkit-inner-spin-button {
 } /*adding id's for signin sign up  ends here */
 /* adding new id for sign functionality */
 #emailsignup {
-	width: 96%;
+	 /* changed width to 100% */
+     width: 100%;
 	font-size: 18px;
 	padding: 14px 6px;
 	border: 2px solid #167a92;
@@ -670,7 +739,8 @@ input::-webkit-inner-spin-button {
 	letter-spacing: 1px;
 }
 #namesignup {
-	width: 96%;
+	 /* changed width to 100% */
+     width: 100%;
 	font-size: 18px;
 	padding: 14px 6px;
 	border: 2px solid #167a92;
@@ -681,7 +751,8 @@ input::-webkit-inner-spin-button {
 	letter-spacing: 1px;
 }
 #mobilenumbersignup {
-	width: 96%;
+	 /* changed width to 100% */
+     width: 100%;
 	font-size: 18px;
 	padding: 14px 6px;
 	border: 2px solid #167a92;
@@ -692,7 +763,8 @@ input::-webkit-inner-spin-button {
 	letter-spacing: 1px;
 }
 #passwordsignup {
-	width: 96%;
+	 /* changed width to 100% */
+     width: 100%;
 	font-size: 18px;
 	padding: 14px 6px;
 	border: 2px solid #167a92;
@@ -726,7 +798,6 @@ input::-webkit-inner-spin-button {
 
 #first {
 	display: flex;
-
 	height: 60px;
 	align-content: center;
 	justify-content: space-around;
@@ -762,6 +833,7 @@ input::-webkit-inner-spin-button {
 }
 
 #last {
+	display: 2px solid blue;
 	display: flex;
 	/* updated */
 	margin: auto 0 auto auto;
@@ -831,7 +903,7 @@ input::-webkit-inner-spin-button {
 /* updated the last hover effect */
 #catogary_tab > :last-child .dropdowns {
 	/* border: 1px solid red; */
-	right: -120px;
+	right: -110px;
 }
 
 hr {
@@ -874,7 +946,31 @@ hr {
 .dropdown:hover a:hover {
 	text-decoration: underline;
 }
-
+#dropuppop{
+    position: relative;
+    display: inline-block;
+    align-items: center;
+}#dropup_content{
+    display: none;
+    text-align: start;
+    visibility: visible;
+    position: absolute;
+    background-color:red;
+    min-width: 10px;
+    border-radius:40px;
+    margin-left:-65px;
+    color:white;
+    padding: 2px 4px;
+    bottom: 10px;
+    left:84px;
+    z-index: 1;
+}#addingnumber {
+    color: white;
+    margin-left:-9px;
+    font-size: 11px;
+    text-decoration: none;
+    display: block;
+  }
 /* vedant's hover down css */
 /* hover dropdown css part below */
 .containers {
@@ -884,13 +980,13 @@ hr {
 	position: relative;
 	/* text-align: center; */
 	line-height: 30px;
-	font-size: 16px;
+	font-size: 15px;
 	cursor: pointer;
 }
 
 .dropdowns {
 	height: auto;
-	width: 220px;
+	width: 250px;
 	position: absolute;
 	/* left: 0; */
 	display: none;
@@ -922,4 +1018,52 @@ a:hover {
 	display: block;
 	z-index: 1;
 	background-color: white;
+}
+
+/********** Media queries below *************/
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+	#catogary_tab {
+		display: none;
+	}
+}
+@media all and (min-width: 320px) and (max-width: 767px) {
+	#catogary_tab {
+		display: none;
+	}	 
+}
+
+@media all and (min-width: 820px) and (max-width: 1024px) {
+	#search_tab {
+		display: flex;
+		align-content: center;
+		width: 95%;
+	}
+}
+
+@media all and (min-width: 360px) and (max-width: 767px) {
+	#search_tab {
+		display: grid;
+		align-content: center;
+		width: 90%;
+	}	 
+
+	#first {
+		display: flex;
+		height: 60px;
+		width: 90%;
+	}
+
+	#last {
+		display: flex;
+		width: 100%;
+	}
+
+	#last1 {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		justify-content: space-between;
+	}
+
 }
