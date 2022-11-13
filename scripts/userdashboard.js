@@ -48,7 +48,7 @@ cart.onclick = () => {
 
 let userdata=JSON.parse(localStorage.getItem("userdata"))
 const username=userdata[0]["username"]
-console.log(userdata)
+
 const useremail=userdata[0]["email"]
 const usernumber=userdata[0]["mobile"]
 document.getElementById("signin").innerText=username;
@@ -57,7 +57,7 @@ document.getElementById("dshms2").innerText=useremail;
 document.getElementById("dshms3").innerText=usernumber;
 
 let init_cart=JSON.parse(localStorage.getItem("cart_items"))||[]
-
+let cart_show_btn=JSON.parse(localStorage.getItem("cart_show_btn")) || 0;
 const cart_display = (cart_items) => {
 	document.getElementById("table").innerHTML=""
 	cart_items = JSON.parse(localStorage.getItem("cart_items")) || [];
@@ -95,7 +95,11 @@ const cart_display = (cart_items) => {
 		let remove_btn = document.createElement("button");
 		remove_btn.innerText = "Remove item";
 		remove_btn.onclick = () => {
+			let cart_show_btn=JSON.parse(localStorage.getItem("cart_show_btn"))||0;
+			let count =cart_show_btn-1
+			display_number(count);
 			remove_item_from_cart(element, index);
+			
 		};
 		td6.append(remove_btn)
 		tr.append(td1,td3,td4,td5,td6)
@@ -125,7 +129,16 @@ const remove_item_from_cart=(element,index)=>{
 		}
 	}
 };
-
+const display_number=(count)=>{
+	document.getElementById("addingnumber").innerText=count;
+	if(count>0){
+		document.getElementById("dropup_content").style.display="block"
+	}else{
+		document.getElementById("dropup_content").style.display="none"
+	}
+	localStorage.setItem("cart_show_btn",JSON.stringify(count))
+	
+}
 /* added drop-down menu in user dashboard starts here*/
 const success=JSON.parse(localStorage.getItem("signin"))
 const nameshow=JSON.parse(localStorage.getItem("userdata"))
