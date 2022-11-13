@@ -12,7 +12,9 @@
     <div id="navbar">
 
     </div>
+    <form id="form">
     <div id="checkout-parent">
+        
         <div id="left">
             <h2>Ship or Pick Up</h2>
             <div id="already-have">
@@ -27,10 +29,10 @@
             <div id="checkout-as-guest">
                 <h2>Check out as a guest</h2>
                 <h4>Email Address*</h4>
-                <input type="email">
+                <input type="email" id="email">
                 <br>
                 <div>
-                    <input type="checkbox" name="" id="">
+                    <input type="checkbox" name="">
                 
                     <p>Please send me Anthropologie offers, promotions, and other commercial messages. (You may unsubscribe at any time.)</p>
                 </div>
@@ -38,10 +40,11 @@
                 
 
             </div>
-            <div id="ship-or-pickup">
+            <div id="ship-or-pickups">
                 <button>Ship</button>
                 <button>Pick Up</button>
             </div>
+            
             <div id="shipping">
                 <h2>Shipping Address</h2>
                 <h4>Country/Region*</h4>
@@ -294,19 +297,19 @@
                 <div>
                     <div>
                         <h4>First Name*</h4>
-                        <input type="text">
+                        <input type="text" id="first_name">
                     </div>
                     <div>
                         <h4>Last Name*</h4>
-                        <input style="padding-right: 20px;" type="text">
+                        <input style="padding-right: 20px;" type="text" id="last_name">
                     </div>
               
                 </div>
 
                 <h4>Street Address*</h4>
-                <input style="width:100%;" type="text">
-                <h4>Adress 2</h4>
-                <input style="width:100%;"  type="text">
+                <input style="width:100%;" type="text" id="address1">
+                <h4>Address 2</h4>
+                <input style="width:100%;"  type="text" id="address2">
                 
                 <div style="width:18%;justify-content:space-evenly;margin-left: -17px;margin-top: 23px;">
                     <input type="checkbox" name="" id="">
@@ -316,41 +319,45 @@
                 <div>
                     <div>
                         <h4>City*</h4>
-                    <input type="text">
+                    <input type="text" id="city_name">
                     </div>
                     <div>
                         <h4>Province or Region</h4>
-                        <input style="padding-right: 20px;"  type="text">
+                        <input style="padding-right: 20px;"  type="text" id="region">
                     </div>
                    
                 </div>
 
                 <h4>Postcode</h4>
-                <input type="number">
+                <input type="number" id="postcode">
                 <h4>Mobile Number*</h4>
-                <input type="number">
+                <input type="number" id="mobile_number">
 
             </div>
         </div>
-        <div id="right">
+   
+        <div id="right1">
                 <h2>Order Summary</h2>
                 <div class="checkout-total">
                     
                     <ul>
-                        <li>Subtotal<span>1200</span></li>
-                        <li>Shipping<span>100</span></li>
-                        <li>Estimated Tax<span>0.00</span></li>
-                        <li>Total<span>1287</span></li>
+                        <li>Subtotal<span id="subtotal"></span></li>
+                        <li>Shipping<span id="shippingCharge"></span></li>
+                        <li>Estimated Tax<span id="tax"></span></li>
+                        <li>Total<span id="total"></span></li>
                         
                     </ul>
-                    <button>SHIP TO THIS ADDRESS</button>
+                    <!-- <button type="submit" id="submit">SHIP TO THIS ADDRESS</button> -->
+                    <input type="submit" value="SHIP TO THIS ADDRESS">
                     <hr>
-                    <button>Promo Code</button>
+                    <button id="promoCode">Promo Code</button>
+                   <div id="promoDiv"></div>
                 </div>
               
             
         </div>
     </div>
+</form>
 </body>
 </html>
 <script type="module" src="./scripts/checkout.js"></script>
