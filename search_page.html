@@ -1,51 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="styles/search_page.css" />
-		<link rel="stylesheet" href="styles/navbar.css" />
-		<link rel="stylesheet" href="styles/footer.css" />
-		<title>Document</title>
-	</head>
-	<body>
-		<!-- Navbar -->
-		<div id="navbar"></div>
 
-		<div id="categories">
-			<div class="category" id="all_products">
-				<h3>All Products</h3>
-			</div>
-			<div class="category" id="dress">
-				<h3>Dress</h3>
-			</div>
-			<div class="category" id="clothing">
-				<h3>Clothing</h3>
-			</div>
-			<div class="category" id="shoes">
-				<h3>Shoes</h3>
-			</div>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="styles/search_page.css" />
+	<link rel="stylesheet" href="styles/navbar.css" />
+	<link rel="stylesheet" href="styles/footer.css" />
+	<title>Document</title>
+</head>
+
+<body>
+	<!-- Navbar -->
+	<div id="navbar"></div>
+
+	<div id="categories">
+		<div class="category" id="all_products">
+			<h3>All Products</h3>
 		</div>
-		<div>
-			<select name="" id="category_select">
-				<option value="products">All Products</option>
-				<option value="dress">Dresses</option>
-				<option value="clothing">Clothing</option>
-				<option value="shoes">Shoes</option>
-			</select>
-			<select id="sort_price">
-				<option value="" disabled selected>Sort</option>
-				<option value="asc">Low to High</option>
-				<option value="desc">High to Low</option>
-			</select>
-			<h3 id="current_category">Searching in All Categories</h3>
+		<div class="category" id="dress">
+			<h3>Dress</h3>
 		</div>
+		<div class="category" id="clothing">
+			<h3>Clothing</h3>
+		</div>
+		<div class="category" id="shoes">
+			<h3>Shoes</h3>
+		</div>
+	</div>
+	<div id="sorting_tab">
+		<h3 id="current_category">Searching in All Categories</h3>
+		<select name="" id="category_select">
+			<option value="products">All Products</option>
+			<option value="dress">Dresses</option>
+			<option value="clothing">Clothing</option>
+			<option value="shoes">Shoes</option>
+		</select>
+		<select id="sort_price">
+			<option value="" disabled selected>Sort</option>
+			<option value="asc">Low to High</option>
+			<option value="desc">High to Low</option>
+		</select>
 
-		<div id="results"></div>
+	</div>
 
-		<!-- footer -->
-		<div id="footer"></div>
-	</body>
+	<div id="results"></div>
+
+	<!-- footer -->
+	<div id="footer"></div>
+</body>
+
 </html>
 <script type="module" src="/scripts/search_page.js"></script>
