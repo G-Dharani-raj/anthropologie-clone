@@ -467,7 +467,7 @@ function coder() {
 	localStorage.setItem("signin", JSON.stringify("unsuccessfull"));
 	window.location = "index.html";
 }
-/* modify added updated data */
+// /* modify added updated data */
 
-/*adding functionality end */
+// /*adding functionality end */
 // added new cart_show_btn end here
