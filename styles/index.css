@@ -1,173 +1,153 @@
 /* body */
-body{
-    padding: 0;
-    margin: 0;
+body {
+	padding: 0;
+	margin: 0;
 }
 /* ********** images boxes on main home page ***************/
-#container{
-    width: 92%;
-    margin: auto;
-    font-family: "Avenir Book",sans-serif;
-    font-size: .75rem;
-    color: gray;
-    text-decoration: none;
+#container {
+	width: 92%;
+	margin: auto;
+	font-family: "Avenir Book", sans-serif;
+	font-size: 0.75rem;
+	color: gray;
+	text-decoration: none;
 }
-.top_small_row{
-    display: grid;
-    grid-template-columns: repeat(4, 4fr);
-    gap: 20px;
-    margin: 20px 0;
+.top_small_row {
+	display: grid;
+	grid-template-columns: repeat(4, 4fr);
+	gap: 20px;
+	margin: 20px 0;
 }
-.top_main{
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    gap: 20px;
-    margin: 25px 0;
+.top_main {
+	display: grid;
+	grid-template-columns: repeat(2, 2fr);
+	gap: 20px;
+	margin: 25px 0;
 }
-.tri_box{
-    display: grid;
-    grid-template-columns: repeat(3, 3fr);
-    gap: 20px;
-    margin: 25px 0;
+.tri_box {
+	display: grid;
+	grid-template-columns: repeat(3, 3fr);
+	gap: 20px;
+	margin: 25px 0;
 }
-.big_two_box{
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    gap: 20px;
-    margin: 25px 0;
+.big_two_box {
+	display: grid;
+	grid-template-rows: repeat(2, 1fr);
+	gap: 20px;
+	margin: 25px 0;
 }
 
-.top_small_row>div>a>img, .top_main>div>a>img, .tri_box>div>a>img, .big_two_box>div>a>img{
-    width: 100%;
+.top_small_row > div > a > img,
+.top_main > div > a > img,
+.tri_box > div > a > img,
+.big_two_box > div > a > img {
+	width: 100%;
 }
 
 /************ button on each image box ****************/
-.box_button{
-    position: relative;
-    display: flex;
+.box_button {
+	position: relative;
+	display: flex;
 }
-.box_button>:last-child{
-    position: absolute;
-    bottom: 10px;
-    margin-bottom: 20px;
-    left: auto;
-    margin: auto;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 10px 20px;
-    background-color: #FDFDF9;
-    text-decoration: none;
-    color: rgb(78, 78, 78);
-    font-weight: 100;
-    letter-spacing: .06rem;
+.box_button > :last-child {
+	position: absolute;
+	bottom: 10px;
+	margin-bottom: 20px;
+	left: auto;
+	margin: auto;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 10px 20px;
+	background-color: #fdfdf9;
+	text-decoration: none;
+	color: rgb(78, 78, 78);
+	font-weight: 100;
+	letter-spacing: 0.06rem;
 }
-.box_button>:last-child:hover{
-    text-decoration: underline;
+.box_button > :last-child:hover {
+	text-decoration: underline;
 }
 
-.explore{
-    margin-bottom: 50px;
+.explore {
+	margin-bottom: 50px;
 }
-.explore>h2{
-    width: 100%;
-    margin: auto;
-    text-align: center;
-    border-bottom: .1px solid rgb(219, 217, 217);
-    padding-bottom: 15px;
-    margin-bottom: 30px;
+.explore > h2 {
+	width: 100%;
+	margin: auto;
+	text-align: center;
+	border-bottom: 0.1px solid rgb(219, 217, 217);
+	padding-bottom: 15px;
+	margin-bottom: 30px;
 }
-.explore>div{
-    display: grid;
-    grid-template-columns: repeat(3, 3fr);
-    gap: 30px;
+.explore > div {
+	display: grid;
+	grid-template-columns: repeat(3, 3fr);
+	gap: 30px;
 }
-.explore>div>div>img{
-    width: 100%;
+.explore > div > div > img {
+	width: 100%;
 }
-.explore>div>div>h3{
-    font-size: 18px;
-    font-weight: 100;
-    color: rgb(27, 27, 27);
+.explore > div > div > h3 {
+	font-size: 18px;
+	font-weight: 100;
+	color: rgb(27, 27, 27);
 }
-.explore>div>div>p{
-    font-weight: 100;
-    color: rgb(27, 27, 27);
+.explore > div > div > p {
+	font-weight: 100;
+	color: rgb(27, 27, 27);
 }
-.explore>div>div>a{
-    color: #167A92;
+.explore > div > div > a {
+	color: #167a92;
 }
 
 /********** slider section *************/
-.slider{
-    margin-bottom: 100px;
+.slider {
+	margin-bottom: 100px;
 }
-.slider>h3{
-    border-bottom: .1px solid rgb(219, 217, 217);
-    padding-bottom: 15px;
-    margin-bottom: 20px;
-    font-size: 18px;
-    font-weight: 400;
-    color: rgb(31, 31, 31);
+.slider > h3 {
+	border-bottom: 0.1px solid rgb(219, 217, 217);
+	padding-bottom: 15px;
+	margin-bottom: 20px;
+	font-size: 18px;
+	font-weight: 400;
+	color: rgb(31, 31, 31);
 }
 
-.slider>div{
-    display: grid;
-    grid-auto-flow: column;
-    gap: 20px;
-    overflow-x: scroll;
-    scroll-behavior: smooth;
+.slider > div {
+	display: grid;
+	grid-auto-flow: column;
+	gap: 20px;
+	overflow-x: scroll;
+	scroll-behavior: smooth;
 }
-.slider>div>div{
-    cursor: pointer;
+.slider > div > div {
+	cursor: pointer;
 }
-<<<<<<< HEAD
 
 /********** Media queries below *************/
-   
+
 @media all and (min-width: 768px) and (max-width: 1024px) {
-    .top_small_row{
-        display: grid;
-        grid-template-columns: repeat(2, 4fr);
-        gap: 20px;
-        margin: 20px 0;
-    }
+	.top_small_row {
+		display: grid;
+		grid-template-columns: repeat(2, 4fr);
+		gap: 20px;
+		margin: 20px 0;
+	}
 }
 @media all and (min-width: 320px) and (max-width: 767px) {
-    
-    .top_small_row{
-        display: grid;
-        grid-template-columns: repeat(2, 4fr);
-        gap: 20px;
-        margin: 20px 0;
-    }
+	.top_small_row {
+		display: grid;
+		grid-template-columns: repeat(2, 4fr);
+		gap: 20px;
+		margin: 20px 0;
+	}
 }
 
 @media all and (min-width: 320px) and (max-width: 767px) {
-    
-    .top_main{
-        display: grid;
-        grid-template-columns: repeat(1, 2fr);
-        gap: 20px;
-        margin: 25px 0;
-=======
-@media all and (max-width: 750px) and (min-width:100px) {
-    .top_small_row{
-        display: none;
-    }
-    .top_main{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .tri_box{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .explore>div{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .explore>div>div>a{
-        padding-left: 0;
->>>>>>> dda230e5056fa0a97261939f43fdd54bd27cf1cb
-    }
+	.top_main {
+		display: grid;
+		grid-template-columns: repeat(1, 2fr);
+		gap: 20px;
+		margin: 25px 0;
+	}
 }
