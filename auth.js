@@ -1,6 +1,6 @@
 
 
-class User{
+class Sign{
     constructor(){
 
     }validateEmail(email){
@@ -26,7 +26,7 @@ class User{
             this.password=p;
             this.description=d;
             
-            const register_api='https://masai-api-mocker.herokuapp.com/auth/register'
+            const register_api=`https://damp-journey-38779.herokuapp.com/user`
             const response=await fetch(register_api,{
                 method:'POST',
                 body: JSON.stringify(this),
@@ -38,9 +38,26 @@ class User{
             console.log("data:",data);
          }
         }
+        async login(u){
+          const login_dat={
+            username:u,
+          }
+            
+          const login_api=''
+          const response=await fetch(login_api,{
+              method:'POST',
+              body: JSON.stringify(this),
+              headers:{
+                  'Content-Type':'application/json',
+              },
+          });
+          const data= await response.json();
+          console.log("data:",data);
+        }
          
 }
-let user= new User()
+let sign= new Sign()
+
 const Register=()=>{
     const reg_form=document.getElementById('signupform1')
     const names="dummy"
@@ -49,12 +66,25 @@ const Register=()=>{
     const mobiles=reg_form.mobilenumbersignup.value
     const passwords=reg_form.passwordsignup.value
     const descriptions="dummy";
-    user.signUP(names,emails,usernames,mobiles,passwords,descriptions)
-    console.log("user:",user)
+    sign.signUP(names,emails,usernames,mobiles,passwords,descriptions)
+    console.log("sign:",sign)
+    let obj=[{
+     username:names,
+     email:emails,
+     mobile:mobiles,
+     password:passwords,
+     description:descriptions
+
+    }]||[{}]
+    localStorage.setItem("userdata",JSON.stringify(obj))
+ 
   
 
 }
 
 
+
 document.getElementById("nextsignuppage").addEventListener("click",Register)
+
+
 

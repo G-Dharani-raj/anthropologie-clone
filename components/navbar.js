@@ -75,13 +75,13 @@ const navbar = () => {
         <p id="signinp1">Create An Account</p>
         <p id="signinp2">Welcome to Anthropologie! it's quick and easy to set up an account</p>
             <form id="signupform1">
-                <p id="numbersignin">Email*</p>
-            <input type="text" id="emailsignup" placeholder="Enter email">
-            <p id="numbersignup">Username *</p>
+                <p id="emailsignuppp11">Email*</p>
+            <input type="email" id="emailsignup" placeholder="Enter email">
+            <p id="usernamesignupp11">Username *</p>
             <input type="text" id="namesignup" placeholder="Enter Text">
-            <p id="numbersignup">Mobile Number *</p>
+            <p id="mobilesignupp11">Mobile Number *</p>
             <input type="number" id="mobilenumbersignup" placeholder="Enter Number">
-            <p id="numbersignup">Password*</p>
+            <p id="passwordsignupp11">Password*</p>
             <input type="text" id="passwordsignup" placeholder="Enter password">
             <br>
             <div class="tick">
@@ -103,11 +103,14 @@ const navbar = () => {
             </label>
     
             </div>
-            <p id="signupterms">By creating an account, you agree to Anthropologie's <a href="index.html">terms of use</a>
-                and <a href="index.html">privacy policy</a>. Landlines, VolP, and prepaid phones are not
+            <p id="signupterms">By creating an account, you agree to Anthropologie's terms. Landlines, VolP, and prepaid phones are not
                 supported. Standard message & data rates may apply. Message
                 frequency may vary. Reply HELP for help, and STOP to cancel.
-                <a href="index.html">Contact us</a> for more information.</p>
+                for more information.
+                <div id="termses"><a href="index.html">Terms & Condition</a><a href="index.html">Privacy policy</a><a href="index.html">Contact us</a> </div>
+                
+                </p>
+               
             
             <p id="Alreadyhave">Already Have an Account</p>
         <button id="signupsignin">SIGN IN</button>
@@ -118,7 +121,7 @@ const navbar = () => {
             <a id="exista"href="index.html"><span id="exist">&#10005;</span></a>
         </div>
         <p id="signinp1">Finish Signing in</p>
-        <p id="signinp2">If your mobile number verified with us, you will recieve a one-time code sent</p>
+        <p id="signinp2">If your mobile number verified with us, proceed enter using your registered password</p>
             <form id="signinformnumberpage">
                 <p id="numbersigninp">Password *</p>
             <input type="text" id="entersigninnumberpassword" placeholder="enter code">
@@ -127,18 +130,20 @@ const navbar = () => {
             <button id="signinbuttonnumber">SIGN IN</button>
             <button id="emailid1">USE EMAIL INSTEAD</button>
             <a href="admin.html"><button id="adminsigninlink">ADMIN SIGN IN</button></a>
-            <p id="signupterms">By creating an account, you agree to Anthropologie's <a href="index.html">terms of use</a>
-            and <a href="index.html">privacy policy</a>. Landlines, VolP, and prepaid phones are not
+            <p id="signupterms">By creating an account, you agree to Anthropologie's terms. Landlines, VolP, and prepaid phones are not
             supported. Standard message & data rates may apply. Message
             frequency may vary. Reply HELP for help, and STOP to cancel.
-            <a href="index.html">Contact us</a> for more information.</p>
+            For more information.
+            <div id="termses"><a href="index.html">Terms & Condition</a><a href="index.html">Privacy policy</a><a href="index.html">Contact us</a> </div>
+            
+            </p>
     </div>
     <div id="signinemailpage">
         <div id="top">
             <a id="exista"href="index.html"><span id="exist">&#10005;</span></a>
         </div>
         <p id="signinp1">Finish Signing in</p>
-        <p id="signinp2">If your Email verified with us, you will recieve a one-time code sent</p>
+        <p id="signinp2">If your Email verified with us, proceed enter using your registered password</p>
             <form id="signinformemailpage">
                 <p id="emailsigninp">Password *</p>
             <input type="text" id="emailsigninpassword" placeholder="enter password">
@@ -147,11 +152,13 @@ const navbar = () => {
             <button id="signinbuttonemail">SIGN IN</button>
             <button id="mobilenumber1">USE NUMBER INSTEAD</button>
             <a href="admin.html"><button id="adminsigninlink">ADMIN SIGN IN</button></a>
-            <p id="signupterms">For more information <a href="index.html">terms of use</a>
-            and <a href="index.html">privacy policy</a>. Landlines, VolP, and prepaid phones are not
-            supported. Standard message & data rates may apply. Message
-            frequency may vary. Reply HELP for help, and STOP to cancel.
-            <a href="index.html">Contact us</a> for more information.</p>
+            <p id="signupterms">By creating an account, you agree to Anthropologie's terms. Landlines, VolP, and prepaid phones are not
+                supported. Standard message & data rates may apply. Message
+                frequency may vary. Reply HELP for help, and STOP to cancel.
+                For more information.
+                <div id="termses"><a href="index.html">Terms & Condition</a><a href="index.html">Privacy policy</a><a href="index.html">Contact us</a> </div>
+                
+                </p>
     </div>
 
     </div>
@@ -178,8 +185,12 @@ const navbar = () => {
             <input id="search-box" type="text" placeholder="Search Anthropologie">
             <img src="https://cdn-icons-png.flaticon.com/512/54/54481.png" alt="">
         </div>
-
+         <div id="dropuppop">
         <img src="https://cdn-icons-png.flaticon.com/512/2956/2956820.png" alt="" id = "cart-navbar-btn" >
+        <div id="dropup_content">
+        <a id="addingnumber"href="cart.html">0</a>
+        </div> 
+        </div>
 
     </div>
 </div>
