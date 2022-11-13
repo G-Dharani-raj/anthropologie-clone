@@ -120,3 +120,23 @@ body{
 .slider>div>div{
     cursor: pointer;
 }
+@media all and (max-width: 750px) and (min-width:100px) {
+    .top_small_row{
+        display: none;
+    }
+    .top_main{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .tri_box{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .explore>div{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .explore>div>div>a{
+        padding-left: 0;
+    }
+}
