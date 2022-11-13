@@ -93,10 +93,6 @@ document
 
 let productData = Number(localStorage.getItem("subtotal")) || 0;
 
-// let subtotal = productData.reduce(function (acc, el) {
-// 	return acc + el.price;
-// }, 0);
-
 document.getElementById("subtotal").innerText = productData;
 document.getElementById("shippingCharge").innerText = "100";
 document.getElementById("tax").innerText = "18%";
@@ -120,7 +116,6 @@ function createButton(event) {
 		.addEventListener("click", checkPromo);
 }
 
-document.getElementById("promoButton").addEventListener("click", checkPromo);
 let count = 0;
 
 function checkPromo(e) {
