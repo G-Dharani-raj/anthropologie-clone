@@ -81,28 +81,27 @@ function addList(
 	localStorage.setItem("customer_data", JSON.stringify(customerData));
 }
 
-
-document.getElementById("shipButton").addEventListener("click",function(event){
-        event.preventDefault();
-        getData();
-        window.location="payment.html"
-})
-
+document
+	.getElementById("shipButton")
+	.addEventListener("click", function (event) {
+		event.preventDefault();
+		getData();
+		window.location = "payment.html";
+	});
 
 // product data
 
-let productData=Number(localStorage.getItem("subtotal"))||0;
+let productData = Number(localStorage.getItem("subtotal")) || 0;
 
-let subtotal = productData.reduce(function (acc, el) {
-	return acc + el.price;
-}, 0);
+// let subtotal = productData.reduce(function (acc, el) {
+// 	return acc + el.price;
+// }, 0);
 
-
-
-document.getElementById("subtotal").innerText=productData;
-document.getElementById("shippingCharge").innerText="100";
-document.getElementById("tax").innerText="18%";
-document.getElementById("total").innerText=productData+(productData*0.18)+100
+document.getElementById("subtotal").innerText = productData;
+document.getElementById("shippingCharge").innerText = "100";
+document.getElementById("tax").innerText = "18%";
+document.getElementById("total").innerText =
+	productData + productData * 0.18 + 100;
 
 document.getElementById("promoCode").addEventListener("click", createButton);
 function createButton(event) {
@@ -115,10 +114,10 @@ function createButton(event) {
 	btn.innerText = "Apply Code";
 	btn.setAttribute("id", "promoButton");
 
-
-
-    div.append(input, btn);
-    document.getElementById("promoButton").addEventListener("click",checkPromo);
+	div.append(input, btn);
+	document
+		.getElementById("promoButton")
+		.addEventListener("click", checkPromo);
 }
 
 document.getElementById("promoButton").addEventListener("click", checkPromo);
