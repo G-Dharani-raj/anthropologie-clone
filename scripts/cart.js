@@ -48,6 +48,9 @@ const cart_display = (cart_items) => {
 		let price = document.createElement("p");
 		price.innerText = `$${product.price}.0`;
 
+		let category = document.createElement("p");
+		category.innerText = product.category;
+
 		let quantity_order = document.createElement("p");
 		quantity_order.innerText = `x${quantity}`;
 
@@ -67,6 +70,7 @@ const cart_display = (cart_items) => {
 			image,
 			name,
 			price,
+			category,
 			quantity_order,
 			total_price,
 			remove_btn
@@ -75,6 +79,7 @@ const cart_display = (cart_items) => {
 		document.querySelector("#cart").append(card);
 	});
 	document.getElementById("cart_total").innerText = cart_total;
+	localStorage.setItem("subtotal", cart_total);
 };
 
 cart_display(initial_cart);
@@ -165,58 +170,70 @@ if(cart_show_btn>0){
 	document.getElementById("dropup_content").style.display="block"
 }
 
-document.querySelector("#right").addEventListener("click",code)
-document.querySelector("#emailid").addEventListener("click",code)
-document.querySelector("#emailid1").addEventListener("click",code)
-document.querySelector("#signupsignin").addEventListener("click",code)
-document.querySelector("#mobilenumber").addEventListener("click",numbersignin)
-document.querySelector("#mobilenumber1").addEventListener("click",numbersignin)
-document.querySelector("#createanaccount").addEventListener("click",signuppage)
-document.querySelector("#createanaccount1").addEventListener("click",signuppage)
-document.querySelector("#nextemail").addEventListener("click",signinemail)
-document.querySelector("#nextmobilenumber").addEventListener("click",signinnumber)
-document.querySelector("#signinbuttonnumber").addEventListener("click",signinbuttonnumber)
-document.querySelector("#signinbuttonemail").addEventListener("click",signinbuttonemail)
-document.querySelector("#nextsignuppage").addEventListener("click",userdetails)
-let signemail=document.getElementById("signin_signup_form")
-let signnumber=document.getElementById("signinnumber")
-	let signup=document.getElementById("signuppage");
-	let signinemails=document.getElementById("signinemailpage")
-  let signinnumbers=document.getElementById("signinnumberpage")
-	let container1=document.getElementById("cart")
-   
-   /*deleted console.log */
-   
-	/* delete console.log */
-	function code(){
-		/* removed footer_div */
+document.querySelector("#right").addEventListener("click", code);
+document.querySelector("#emailid").addEventListener("click", code);
+document.querySelector("#emailid1").addEventListener("click", code);
+document.querySelector("#signupsignin").addEventListener("click", code);
+document.querySelector("#mobilenumber").addEventListener("click", numbersignin);
+document
+	.querySelector("#mobilenumber1")
+	.addEventListener("click", numbersignin);
+document
+	.querySelector("#createanaccount")
+	.addEventListener("click", signuppage);
+document
+	.querySelector("#createanaccount1")
+	.addEventListener("click", signuppage);
+document.querySelector("#nextemail").addEventListener("click", signinemail);
+document
+	.querySelector("#nextmobilenumber")
+	.addEventListener("click", signinnumber);
+document
+	.querySelector("#signinbuttonnumber")
+	.addEventListener("click", signinbuttonnumber);
+document
+	.querySelector("#signinbuttonemail")
+	.addEventListener("click", signinbuttonemail);
+document
+	.querySelector("#nextsignuppage")
+	.addEventListener("click", userdetails);
+let signemail = document.getElementById("signin_signup_form");
+let signnumber = document.getElementById("signinnumber");
+let signup = document.getElementById("signuppage");
+let signinemails = document.getElementById("signinemailpage");
+let signinnumbers = document.getElementById("signinnumberpage");
+let container1 = document.getElementById("cart");
 
-	container1.style.position="sticky"
-	container1.style.overflow="hidden"
-	container1.style.filter="blur(1px)"
-	signemail.style.display="block"
-	signnumber.style.display="none"
-  signup.style.display="none"
-  signinemails.style.display="none"
-  signinnumbers.style.display="none"      
+/*deleted console.log */
 
+/* delete console.log */
+function code() {
+	/* removed footer_div */
+
+	container1.style.position = "sticky";
+	container1.style.overflow = "hidden";
+	container1.style.filter = "blur(1px)";
+	signemail.style.display = "block";
+	signnumber.style.display = "none";
+	signup.style.display = "none";
+	signinemails.style.display = "none";
+	signinnumbers.style.display = "none";
 }
 function numbersignin() {
 	/* removed footer_div */
 
-	container1.style.position="sticky"
-	container1.style.overflow="hidden"
-	container1.style.filter="blur(1px)"
-signemail.style.display = "none";
-signnumber.style.display = "block";
-signup.style.display = "none";
-signinemails.style.display = "none";
-signinnumbers.style.display = "none";
+	container1.style.position = "sticky";
+	container1.style.overflow = "hidden";
+	container1.style.filter = "blur(1px)";
+	signemail.style.display = "none";
+	signnumber.style.display = "block";
+	signup.style.display = "none";
+	signinemails.style.display = "none";
+	signinnumbers.style.display = "none";
 }
 
 function signuppage() {
 	/* removed footer_div */
-
 	container1.style.position="sticky"
 	container1.style.overflow="hidden"
 	container1.style.filter="blur(1px)"
@@ -338,25 +355,10 @@ alert("Sign Up successfull press sign in below button ")
 window.location="cart.html"
 }
 }
-function signinbuttonemail(){
-/* added new userdata userpassword */
-let userdata=JSON.parse(localStorage.getItem("userdata"))
-let userpassword=userdata[0]["password"]
-
-if(document.getElementById("emailsigninpassword").value==userpassword){
-alert("Sign in successfull")
-localStorage.setItem("signin",JSON.stringify("successfull"))
-window.location="index.html"
-
-}else{
-document.getElementById("emailsigninpassword").style.borderColor="red"
-document.getElementById("emailsigninpassword").placeholder="enter registered password"
-document.getElementById("emailsigninp").style.color="red"
-document.getElementById("emailsigninp").innerText="Enter correct password"
-}
 
 
-}
+
+
 function signinbuttonnumber(){
 /* added new userdata userpassword */
 let userdata=JSON.parse(localStorage.getItem("userdata"))
@@ -371,10 +373,24 @@ document.getElementById("entersigninnumberpassword").style.borderColor="red"
 document.getElementById("entersigninnumberpassword").placeholder="enter registered password"
 document.getElementById("numbersigninp").innerText="Enter corret password"
 document.getElementById("numbersigninp").style.color="red"
-}
+function signinbuttonemail() {
+	/* added new userdata userpassword */
+	let userdata = JSON.parse(localStorage.getItem("userdata"));
+	let userpassword = userdata[0]["password"];
 
+	if (document.getElementById("emailsigninpassword").value == userpassword) {
+		alert("Sign in successfull");
+		window.location = "userdashboard.html";
+	} else {
+		document.getElementById("emailsigninpassword").style.borderColor =
+			"red";
+		document.getElementById("emailsigninp").style.color = "red";
+		document.getElementById("emailsigninp").innerText =
+			"Enter correct password";
+	}
 }
 /* modify added updated data */
+// added cart btn below 
 const success=JSON.parse(localStorage.getItem("signin"))
 const nameshow=JSON.parse(localStorage.getItem("userdata"))
 if(success=="successfull"){
@@ -426,10 +442,8 @@ function coder(){
 	alert("sign out successfull")
 	localStorage.setItem("signin",JSON.stringify("unsuccessfull"))
 	window.location="index.html"
-
 }
 /* modify added updated data */
 
-
 /*adding functionality end */
-// added new cart_show_btn 
+// added new cart_show_btn end here

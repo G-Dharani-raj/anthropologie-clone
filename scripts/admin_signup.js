@@ -1,5 +1,7 @@
 // basic importing appending components
 import { admin_signup } from "../components/admin_login_compo.js";
+
+//for appennding signup html components to the page
 function signupPage() {
   document.getElementById("container").innerHTML = admin_signup();
 }
@@ -15,13 +17,16 @@ document.getElementById("login_admin").onclick = () => {
   location.href = "/admin_login.html";
 };
 
-//signup function
+//calling signup function
 document.getElementById("signup_button_admin").onclick = () => {
   signUp();
 };
 
+//alert
+let temp = document.getElementById("admin_massage_signup");
+
+//signup function
 async function signUp() {
-  let temp = document.getElementById("admin_massage_signup");
   let name = document.getElementById("admin_name").value;
   let email = document.getElementById("email_admin").value;
   let password = document.getElementById("password_admin").value;
@@ -141,7 +146,7 @@ if(!remainFlag){
           })
             let data = await res.json()
             console.log(data)
-            console.log()
+            localStorage.removeItem('admin_stay_logged')
             location.href = "/admin_login.html"
             
           }
@@ -166,3 +171,35 @@ if(localStorage.getItem("admin_stay_logged") == "true"){
       location.href = "/admin_dashboard.html"
   }, 2000);
 };
+
+//forget password button
+document.getElementById("forget_admin").onclick = ()=>{
+  let email = prompt("Please enter your Email" )
+  if(email != null){
+    let pass = prompt("Please Enter your New Password")
+    if(pass != null){
+      updatePass(email, pass);
+    }
+  }
+  
+  async function updatePass(email, pass){
+      try{
+        let send_this_data = {
+            password: pass,
+        }
+    
+        let res = await fetch(`https://damp-journey-38779.herokuapp.com/user/${email}`, {
+            method: "PATCH",
+            body: JSON.stringify(send_this_data),
+            headers:{
+                "COntent-Type": "application/json"
+            }
+        })
+        let data = await res.json();
+        alert("Your Password is reseted!")
+        }
+        catch(err){
+            console.log(err)
+        }
+    }
+}
