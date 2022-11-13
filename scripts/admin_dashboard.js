@@ -48,14 +48,14 @@ if(localStorage.getItem("admin_stay_logged") == "false"){
     };
   
     try {
-      res = await fetch(`https://damp-journey-38779.herokuapp.com/${category}/`, {
+      let res = await fetch(`https://damp-journey-38779.herokuapp.com/${category}/`, {
         method: "POST",
         body: JSON.stringify(newData),
         headers: {
           "Content-Type": "application/json",
         },
       });
-      res = await fetch(`https://damp-journey-38779.herokuapp.com/products/`, {
+      let ressponse = await fetch(`https://damp-journey-38779.herokuapp.com/products/`, {
         method: "POST",
         body: JSON.stringify(newData),
         headers: {
@@ -63,14 +63,14 @@ if(localStorage.getItem("admin_stay_logged") == "false"){
         },
       });
   
-      let data = await res.json();
+      let data = await ressponse.json();
       console.log(data);
       document.getElementById("dashboard_prodadded_massage").innerText =
         "Item Has Been Added...";
         if(category != "shoes"){
           //calling a custom function for adding data without loading page
           cutomAppend(data);
-          window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);
+          window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })
 
         }
         document.getElementById("dashboard_addprod_name").value = null;
@@ -236,6 +236,15 @@ if(localStorage.getItem("admin_stay_logged") == "false"){
   document.getElementById("admin_logout").onclick = ()=>{
     localStorage.setItem("admin_stay_logged", false)
     location.href = "/admin_login.html";
+  }
+
+  //back to top button
+  document.getElementById("goToTop").onclick = ()=>{
+    window.scroll({
+      top: 0, 
+      left: 0, 
+      behavior: 'smooth' 
+     });
   }
 }
 
