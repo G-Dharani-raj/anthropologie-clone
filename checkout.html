@@ -15,7 +15,9 @@
     <div id="navbar">
 
     </div>
+    <form id="form">
     <div id="checkout-parent">
+        
         <div id="left">
             <h2>Ship or Pick Up</h2>
             <div id="already-have">
@@ -30,22 +32,29 @@
             <div id="checkout-as-guest">
                 <h2>Check out as a guest</h2>
                 <h4>Email Address*</h4>
-                <input type="email">
+                <input type="email" id="email">
                 <br>
                 <div>
+<<<<<<< HEAD
                     <input type="checkbox" name="" id="">
 
                     <p>Please send me Anthropologie offers, promotions, and other commercial messages. (You may
                         unsubscribe at any time.)</p>
+=======
+                    <input type="checkbox" name="">
+                
+                    <p>Please send me Anthropologie offers, promotions, and other commercial messages. (You may unsubscribe at any time.)</p>
+>>>>>>> dda230e5056fa0a97261939f43fdd54bd27cf1cb
                 </div>
 
 
 
             </div>
-            <div id="ship-or-pickup">
+            <div id="ship-or-pickups">
                 <button>Ship</button>
                 <button>Pick Up</button>
             </div>
+            
             <div id="shipping">
                 <h2>Shipping Address</h2>
                 <h4>Country/Region*</h4>
@@ -301,20 +310,27 @@
                 <div>
                     <div>
                         <h4>First Name*</h4>
-                        <input type="text">
+                        <input type="text" id="first_name">
                     </div>
                     <div>
                         <h4>Last Name*</h4>
-                        <input style="padding-right: 20px;" type="text">
+                        <input style="padding-right: 20px;" type="text" id="last_name">
                     </div>
 
                 </div>
 
                 <h4>Street Address*</h4>
+<<<<<<< HEAD
                 <input style="width:100%;" type="text">
                 <h4>Adress 2</h4>
                 <input style="width:100%;" type="text">
 
+=======
+                <input style="width:100%;" type="text" id="address1">
+                <h4>Address 2</h4>
+                <input style="width:100%;"  type="text" id="address2">
+                
+>>>>>>> dda230e5056fa0a97261939f43fdd54bd27cf1cb
                 <div style="width:18%;justify-content:space-evenly;margin-left: -17px;margin-top: 23px;">
                     <input type="checkbox" name="" id="">
                     <h4>PO Box</h4>
@@ -323,22 +339,31 @@
                 <div>
                     <div>
                         <h4>City*</h4>
+<<<<<<< HEAD
                         <input type="text">
                     </div>
                     <div>
                         <h4>Province or Region</h4>
                         <input style="padding-right: 20px;" type="text">
+=======
+                    <input type="text" id="city_name">
+                    </div>
+                    <div>
+                        <h4>Province or Region</h4>
+                        <input style="padding-right: 20px;"  type="text" id="region">
+>>>>>>> dda230e5056fa0a97261939f43fdd54bd27cf1cb
                     </div>
 
                 </div>
 
                 <h4>Postcode</h4>
-                <input type="number">
+                <input type="number" id="postcode">
                 <h4>Mobile Number*</h4>
-                <input type="number">
+                <input type="number" id="mobile_number">
 
             </div>
         </div>
+<<<<<<< HEAD
         <div id="right">
             <h2>Order Summary</h2>
             <div class="checkout-total">
@@ -356,8 +381,31 @@
             </div>
 
 
+=======
+   
+        <div id="right1">
+                <h2>Order Summary</h2>
+                <div class="checkout-total">
+                    
+                    <ul>
+                        <li>Subtotal<span id="subtotal"></span></li>
+                        <li>Shipping<span id="shippingCharge"></span></li>
+                        <li>Estimated Tax<span id="tax"></span></li>
+                        <li>Total<span id="total"></span></li>
+                        
+                    </ul>
+                    <!-- <button type="submit" id="submit">SHIP TO THIS ADDRESS</button> -->
+                    <input type="submit" value="SHIP TO THIS ADDRESS">
+                    <hr>
+                    <button id="promoCode">Promo Code</button>
+                   <div id="promoDiv"></div>
+                </div>
+              
+            
+>>>>>>> dda230e5056fa0a97261939f43fdd54bd27cf1cb
         </div>
     </div>
+</form>
 </body>
 
 </html>

@@ -2,7 +2,7 @@
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	width: 70%;
-	margin: auto;
+	/* margin: auto; */
 	gap: 10px;
 }
 
@@ -13,6 +13,43 @@
 }
 
 
+#total_cart {
+	display: flex;
+	/* position: relative; */
+}
+
+#right_summary {
+	position: sticky;
+	/* position: -webkit-sticky; */
+	width: 10%;
+	height: 30%;
+	/* left: 80%;
+	top: 40%;
+	bottom: 50%; */
+	top: 0;
+	text-align: left;
+	margin-left: 10%;
+	margin-top: 10%;
+	line-height: 30px;
+}
+#right_summary h2 {
+	font-size: 20px;
+	font-weight: 530;
+	color: rgba(38, 38, 44, 1);
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#right_summary button {
+	background-color: white;
+	padding: 10px;
+	border: 0.1px solid;
+}
+
+#right_summary button:hover {
+	background-color: grey;
+	color: white;
+	cursor: pointer;
+}
 @media all and (min-width: 768px) and (max-width: 1024px) {
 	#cart {
 		display: grid;
