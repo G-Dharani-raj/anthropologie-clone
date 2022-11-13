@@ -158,6 +158,23 @@ h2{
     margin-top: 22%;
 }
 
+#goToTop{
+    width: 10%;
+    padding: 4px 15px;
+    margin: 5px 45%;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    border-color:antiquewhite;
+}
+#goToTop:hover{
+    width: 10%;
+    color: white;
+    background-color: #388E3C;
+    cursor: pointer;
+    border-color: #388E3C;
+    
+}
+
 
 
 
