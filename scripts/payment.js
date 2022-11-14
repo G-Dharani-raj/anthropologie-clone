@@ -34,8 +34,14 @@ let popup=document.getElementById("popup");
 
 function openPopup(event){
     event.preventDefault();
-    
+    localStorage.setItem("cart_items",JSON.stringify("[]"))
+    localStorage.setItem("cart_show_btn",JSON.stringify(0))
+    setTimeout(()=>{
+        window.location="index.html"
+    },1000)
     popup.classList.add("open-popup");
+    
+    
     
 }
 

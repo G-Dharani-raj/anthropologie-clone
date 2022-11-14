@@ -429,9 +429,9 @@ path.append(img,div1)
 document.getElementById("signin_signup_popu").innerHTML="none"
 }else{
 	document.getElementById("anchor_a").href="index.html"
-}if("unsuccessfull"==JSON.parse(localStorage.getItem("signin"))||"successfull"==JSON.parse(localStorage.setItem("successfull"))){
-	document.getElementById("signin").innerText="Sign in"
+
 }
+
 
 
 const leave=document.getElementById("leavesignin")
@@ -443,6 +443,9 @@ leave.onclick=()=>{
 
 }
 
+if("unsuccessfull"==JSON.parse(localStorage.getItem("signin"))){
+document.getElementById("signin").innerText="Sign in"
+}
 /* modify added updated data */
 
 

@@ -447,9 +447,7 @@ document.getElementById("signin_signup_popup").innerHTML=""
 }else{
 	document.getElementById("anchor_a").href="index.html"
 }
-if("unsuccessfull"==JSON.parse(localStorage.getItem("signin"))||"successfull"==JSON.parse(localStorage.setItem("successfull"))){
-	document.getElementById("signin").innerText="Sign in"
-}
+
 
 
 const leave=document.getElementById("leavesignin")
@@ -460,6 +458,10 @@ leave.onclick=()=>{
 	window.location="index.html"
 
 }
+
+if("unsuccessfull"==JSON.parse(localStorage.getItem("signin"))){
+	document.getElementById("signin").innerText="Sign in"
+	}
 
 /* modify added updated data */
 

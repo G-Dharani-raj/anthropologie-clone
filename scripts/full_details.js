@@ -478,7 +478,7 @@ path.append(img,div1)
 document.getElementById("signin_signup_popup").innerHTML=""
 }else{
 	document.getElementById("anchor_a").href="index.html"
-}if("unsuccessfull"==JSON.parse(localStorage.getItem("signin"))||"successfull"==JSON.parse(localStorage.setItem("successfull"))){
+}if("successfull"==JSON.parse(localStorage.getItem("signup"))){
 	document.getElementById("signin").innerText="Sign in"
 }
 
@@ -491,7 +491,12 @@ leave.onclick=()=>{
 	window.location="index.html"
 
 }
-
+if("successfull"==JSON.parse(localStorage.getItem("signup"))){
+	document.getElementById("signin").innerText="Sign in"
+}
+if("unsuccessfull"==JSON.parse(localStorage.getItem("signin"))){
+	document.getElementById("signin").innerText="Sign in"
+	}
 /* modify added updated data */
 
 

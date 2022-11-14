@@ -444,8 +444,7 @@ if (success == "successfull") {
 if (cart_show_btn > 0) {
 	document.getElementById("addingnumber").innerText = cart_show_btn;
 	document.getElementById("dropup_content").style.display = "block";
-}if("unsuccessfull"==JSON.parse(localStorage.getItem("signin"))||"successfull"==JSON.parse(localStorage.setItem("successfull"))){
-	document.getElementById("signin").innerText="Sign in"
+
 }
 
 document.querySelector("leavesignin").addEventListener("click", coder);
@@ -456,7 +455,9 @@ function coder() {
 	window.location = "index.html";
 }
 
-
+if("unsuccessfull"==JSON.parse(localStorage.getItem("signin"))){
+	document.getElementById("signin").innerText="Sign in"
+	}
 // /* modify added updated data */
 
 // /*adding functionality end */

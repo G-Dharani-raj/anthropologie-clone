@@ -32,7 +32,8 @@ function shippingList(
 	this.mobileNumber = mobileNumber;
 }
 
-function getData() {
+function getData(event) {
+
 	let email = document.getElementById("email").value;
 	let country = document.getElementById("country").value;
 	let firstName = document.getElementById("first_name").value;
@@ -193,6 +194,8 @@ document.querySelector("#right").addEventListener("click",code)
 document.querySelector("#emailid").addEventListener("click",code)
 document.querySelector("#emailid1").addEventListener("click",code)
 document.querySelector("#signupsignin").addEventListener("click",code)
+document.querySelector("#already-have").addEventListener("click",code)
+document.querySelector("#signinbtnchk").addEventListener("click",coder)
 document.querySelector("#mobilenumber").addEventListener("click",numbersignin)
 document.querySelector("#mobilenumber1").addEventListener("click",numbersignin)
 document.querySelector("#createanaccount").addEventListener("click",signuppage)
@@ -215,6 +218,21 @@ let signnumber=document.getElementById("signinnumber")
 	function code(){
 	//removed foooter_div.style 
 	
+
+	container1.style.position="sticky"
+	container1.style.overflow="hidden"
+	container1.style.filter="blur(1px)"
+	signemail.style.display="block"
+	signnumber.style.display="none"
+  signup.style.display="none"
+  signinemails.style.display="none"
+  signinnumbers.style.display="none"  
+  
+
+}
+function coder(event){
+	//removed foooter_div.style 
+	event.preventDefault();
 
 	container1.style.position="sticky"
 	container1.style.overflow="hidden"
@@ -455,9 +473,23 @@ let cart_show_btn=JSON.parse(localStorage.getItem("cart_show_btn"))||0
 if(cart_show_btn>0){
 	document.getElementById("dropup_content").style.display="block"
 	document.getElementById("addingnumber").innerText=cart_show_btn
-}if("unsuccessfull"==JSON.parse(localStorage.getItem("signin"))||"successfull"==JSON.parse(localStorage.setItem("successfull"))){
+}if("successfull"==JSON.parse(localStorage.getItem("signup"))){
 	document.getElementById("signin").innerText="Sign in"
 }
+if(document.getElementById("email").value.includes("@")){
+	returncheck(1)
+}
+let ship_btn=document.getElementById("ship-btn")
+ship_btn.addEventListener("click",returncheck)
+let shipbtn=document.getElementById("shipButton")
+shipbtn.addEventListener("click",returncheckr)
+function returncheck(event){
+	event.preventDefault();
+	window.location="payment.html"
+}function returncheckr(){
+	window.location="payment.html"
+}
+
 
 const leave=document.getElementById("leavesignin")
 leave.onclick=()=>{
@@ -469,6 +501,10 @@ leave.onclick=()=>{
 
 }
 
+
+if("unsuccessfull"==JSON.parse(localStorage.getItem("signin"))){
+	document.getElementById("signin").innerText="Sign in"
+}
 
 /* modify added updated data */
 /*adding functionality end */

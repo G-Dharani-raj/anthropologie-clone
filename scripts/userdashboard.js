@@ -189,18 +189,21 @@ div1.append(a,div2)
 path.append(img,div1)
 }else{
 	document.getElementById("anchor_a").href="index.html"
-}if("unsuccessfull"==JSON.parse(localStorage.getItem("signin"))||"successfull"==JSON.parse(localStorage.setItem("successfull"))){
-	document.getElementById("signin").innerText="Sign in"
+
 }
+// if("successfull"==JSON.parse(localStorage.getItem("signup"))){
+// 	document.getElementById("signin").innerText="Sign in"
+// }
 
 const leave=document.getElementById("leavesignin")
 leave.onclick=()=>{
-	document.getElementById("signin_signup_form").style.display="none"
+
 	alert("sign out successfull")
 	localStorage.setItem("signin",JSON.stringify("unsuccessfull"))
 	window.location="index.html"
 
 }
+
 /* modify added updated data */
 
 /*ends here*/
