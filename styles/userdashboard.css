@@ -99,9 +99,19 @@ color:#686868;
     color:#228197;
     text-decoration: underline;
    
-   }#dshmtp2:hover{
+   }#dshmtp2 a{
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-family: serif;
+    color:#228197;
+    text-decoration: underline;
+   
+}#dshmtp2:hover{
     text-decoration: none;
-   }#dshmp1{
+   }
+   #dshmtp2 a:hover{
+    text-decoration: none;
+}#dshmp1{
     font-size:14px;
     color:#383737;
     font-family: serif;
@@ -206,12 +216,12 @@ width:14%;
     text-align:center;
 }#td5{
     width:16%;
-    padding-left: 50px;
+    padding-left: 58px;
     text-align: left;
 }#td6{
     width:21%;
   text-align:left;
-  padding-left:10px;
+  padding-left:20px;
 }button{
     color:white;
     padding:6px;

@@ -243,172 +243,159 @@ function signuppage() {
 	signinnumbers.style.display = "none";
 }
 
-function signinemail() {
+function signinemail(){
 	/* added new userdata useremail */
-	let userdata = JSON.parse(localStorage.getItem("userdata")) || [
-		{ email: 0 },
-	];
-	let useremail = userdata[0]["email"];
-
-	/*removed foooter_div.style */
-	if (useremail == 0) {
-		document.getElementById("signinemail").innerText =
-			"Email not registered";
-		document.getElementById("emailsignin").placeholder =
-			"create an account";
-		document.getElementById("emailsignin").style.color = "red";
-		document.getElementById("signinemail").style.color = "red";
-		document.getElementById("emailsignin").style.borderColor = "red";
-	} else if (document.getElementById("emailsignin").value == useremail) {
-		container1.style.position = "sticky";
-		container1.style.overflow = "hidden";
-		container1.style.filter = "blur(1px)";
-		signemail.style.display = "none";
-		signnumber.style.display = "none";
-		signup.style.display = "none";
-		signinemails.style.display = "block";
-		signinnumbers.style.display = "none";
-	} else {
-		document.getElementById("signinemail").innerText =
-			"Enter correct email";
-		document.getElementById("emailsignin").placeholder =
-			"Enter registered email";
-		document.getElementById("signinemail").style.color = "red";
-		document.getElementById("emailsignin").style.borderColor = "red";
+	let userdata=JSON.parse(localStorage.getItem("userdata"))||[{email:0}]
+	userdata.forEach((e)=>{
+		if(e.email==0){
+			document.getElementById("signinemail").innerText="Email not registered"
+			document.getElementById("emailsignin").placeholder="create an account"
+			document.getElementById("emailsignin").style.color="red"
+			document.getElementById("signinemail").style.color="red"
+			document.getElementById("emailsignin").style.borderColor="red"
+			
+		}	 else if(document.getElementById("emailsignin").value==e.email){
+			container1.style.position="sticky"
+			container1.style.overflow="hidden"
+			container1.style.filter="blur(1px)"
+			signemail.style.display="none"
+			signnumber.style.display="none"
+		  signup.style.display="none"
+		  signinemails.style.display="block"
+		  signinnumbers.style.display="none"
+		}else{
+			document.getElementById("signinemail").innerText="Enter correct email"
+			document.getElementById("emailsignin").placeholder="Enter registered email"
+		document.getElementById("signinemail").style.color="red"
+		document.getElementById("emailsignin").style.borderColor="red"
+		
+		
+		}
+	})
+	
 	}
-}
-function signinnumber() {
+function signinnumber(){
 	/* added new userdata usernumber */
-	let userdata = JSON.parse(localStorage.getItem("userdata")) || [
-		{ mobile: 0 },
-	];
-	let usernumber = userdata[0]["mobile"];
-	console.log(usernumber);
+	let userdata=JSON.parse(localStorage.getItem("userdata"))||[{mobile:0}]
+	userdata.forEach((e)=>{
+	
+	
+	if(e.mobile===0){
+		document.getElementById("enternumbersignin").placeholder="create an account"
+		document.getElementById("enternumbersignin").style.color="red"
+		document.getElementById("numbersignin").innerText="Number Not Registered"
+		document.getElementById("numbersignin").style.color="red"
+		document.getElementById("enternumbersignin").style.borderColor="red"
+		
+	}
+	else if(document.getElementById("enternumbersignin").value==e.mobile){
+	 /*removed foooter_div.style */
+	container1.style.position="sticky"
+	container1.style.overflow="hidden"
+	container1.style.filter="blur(1px)"
+	signemail.style.display="none"
+	signnumber.style.display="none"
+	signup.style.display="none"
+	signinemails.style.display="none"
+	signinnumbers.style.display="block"
+	}else{
+	  document.getElementById("numbersignin").innerText="Enter correct number"
+	document.getElementById("numbersignin").style.color="red"
+	document.getElementById("enternumbersignin").placeholder="Enter register number"
+	document.getElementById("enternumbersignin").style.borderColor="red"
+	
+	
+	}})
+	
+	}/* updated below functionality */
+function userdetails(){
+/* added arr variable */
+let arr=JSON.parse(localStorage.getItem("userdata"))||[];
+let emails=document.getElementById("emailsignup").value 
+let usernames=document.getElementById("namesignup").value 
+let mobiles=document.getElementById("mobilenumbersignup").value 
+let passwords=document.getElementById("passwordsignup").value 
 
-	if (usernumber === 0) {
-		document.getElementById("enternumbersignin").placeholder =
-			"create an account";
-		document.getElementById("enternumbersignin").style.color = "red";
-		document.getElementById("numbersignin").innerText =
-			"Number Not Registered";
-		document.getElementById("numbersignin").style.color = "red";
-		document.getElementById("enternumbersignin").style.borderColor = "red";
-	} else if (
-		document.getElementById("enternumbersignin").value == usernumber
-	) {
-		/*removed foooter_div.style */
-		container1.style.position = "sticky";
-		container1.style.overflow = "hidden";
-		container1.style.filter = "blur(1px)";
-		signemail.style.display = "none";
-		signnumber.style.display = "none";
-		signup.style.display = "none";
-		signinemails.style.display = "none";
-		signinnumbers.style.display = "block";
-	} else {
-		document.getElementById("numbersignin").innerText =
-			"Enter correct number";
-		document.getElementById("numbersignin").style.color = "red";
-		document.getElementById("enternumbersignin").placeholder =
-			"Enter register number";
-		document.getElementById("enternumbersignin").style.borderColor = "red";
-	}
-} /* updated below functionality */
-function userdetails() {
-	/* added arr variable */
-	let arr = JSON.parse(localStorage.getItem("userdata")) || [];
-	let emails = document.getElementById("emailsignup").value;
-	let usernames = document.getElementById("namesignup").value;
-	let mobiles = document.getElementById("mobilenumbersignup").value;
-	let passwords = document.getElementById("passwordsignup").value;
+ if(!emails.includes("@gmail.com")){
+  document.getElementById("emailsignuppp11").innerText="Entered wrong email"
+  document.getElementById("emailsignuppp11").style.color="red"
+  document.getElementById("emailsignup").placeholder="Email must contain name@gmail.com"
+  document.getElementById("emailsignup").style.borderColor="red"
+} if(usernames==""){
+	document.getElementById("usernamesignupp11").innerText="Entered empty username "
+  document.getElementById("usernamesignupp11").style.color="red"
+  document.getElementById("namesignup").placeholder="Username can't be empty"
+  document.getElementById("namesignup").style.borderColor="red"
 
-	if (!emails.includes("@gmail.com")) {
-		document.getElementById("emailsignuppp11").innerText =
-			"Entered wrong email";
-		document.getElementById("emailsignuppp11").style.color = "red";
-		document.getElementById("emailsignup").placeholder =
-			"Email must contain name@gmail.com";
-		document.getElementById("emailsignup").style.borderColor = "red";
-	}
-	if (usernames == "") {
-		document.getElementById("usernamesignupp11").innerText =
-			"Entered empty username ";
-		document.getElementById("usernamesignupp11").style.color = "red";
-		document.getElementById("namesignup").placeholder =
-			"Username can't be empty";
-		document.getElementById("namesignup").style.borderColor = "red";
-	}
-	if (mobiles.length < 9 || mobiles.length == 0) {
-		document.getElementById("mobilesignupp11").innerText =
-			"Entered wrong number";
-		document.getElementById("mobilesignupp11").style.color = "red";
-		document.getElementById("mobilenumbersignup").placeholder =
-			"Number must be above 9 digits";
-		document.getElementById("mobilenumbersignup").style.borderColor = "red";
-	}
-	if (passwords.length < 4 || passwords.length == 0) {
-		document.getElementById("passwordsignupp11").innerText =
-			"Entered wrong password";
-		document.getElementById("passwordsignupp11").style.color = "red";
-		document.getElementById("passwordsignup").placeholder =
-			"Password must be above 5 digits";
-		document.getElementById("passwordsignup").style.borderColor = "red";
-	} else if (
-		emails.includes("@gmail.com") &&
-		usernames != "" &&
-		mobiles.length > 9 &&
-		passwords.length > 4
-	) {
-		let obj = {
-			email: emails,
-			username: usernames,
-			mobile: mobiles,
-			password: passwords,
-		};
-		arr.push(obj);
-		localStorage.setItem("userdata", JSON.stringify(arr));
-		alert("Sign Up successfull press sign in below button ");
-		window.location = "cart.html";
-	}
+}  if(mobiles.length<9||mobiles.length==0){
+	document.getElementById("mobilesignupp11").innerText="Entered wrong number"
+	document.getElementById("mobilesignupp11").style.color="red"
+	document.getElementById("mobilenumbersignup").placeholder="Number must be above 9 digits"
+	document.getElementById("mobilenumbersignup").style.borderColor="red"
+}if(passwords.length<4||passwords.length==0){
+	document.getElementById("passwordsignupp11").innerText="Entered wrong password"
+	document.getElementById("passwordsignupp11").style.color="red"
+	document.getElementById("passwordsignup").placeholder="Password must be above 5 digits"
+	document.getElementById("passwordsignup").style.borderColor="red"
+
 }
 
-function signinbuttonnumber() {
-	/* added new userdata userpassword */
-	let userdata = JSON.parse(localStorage.getItem("userdata"));
-	let userpassword = userdata[0]["password"];
+else if(emails.includes("@gmail.com")&&usernames!=""&&mobiles.length>9&&passwords.length>4){
+  let obj={
+	email:emails,
+	username:usernames,
+	mobile:mobiles,
+	password:passwords,
+  }
+  arr.push(obj)
+  localStorage.setItem("userdata",JSON.stringify(arr))
+  localStorage.setItem("signup",JSON.stringify("successfull"))
+alert("Sign Up successfully")
+document.getElementById("signin").innerText="Sign in"
+location.reload()
 
-	if (
-		document.getElementById("entersigninnumberpassword").value ==
-		userpassword
-	) {
-		alert("Sign in successfull");
-		localStorage.setItem("signin", JSON.stringify("successfull"));
-		window.location = "index.html";
-	} else {
-		document.getElementById("entersigninnumberpassword").style.borderColor =
-			"red";
-		document.getElementById("entersigninnumberpassword").placeholder =
-			"enter registered password";
-		document.getElementById("numbersigninp").innerText =
-			"Enter corret password";
-		document.getElementById("numbersigninp").style.color = "red";
-	}
 }
-function signinbuttonemail() {
-	/* added new userdata userpassword */
-	let userdata = JSON.parse(localStorage.getItem("userdata"));
-	let userpassword = userdata[0]["password"];
+}
+function signinbuttonemail(){
+/* added new userdata userpassword */
+let userdata=JSON.parse(localStorage.getItem("userdata"))
+userdata.forEach((e)=>{
 
-	if (document.getElementById("emailsigninpassword").value == userpassword) {
-		alert("Sign in successfull");
-		window.location = "userdashboard.html";
-	} else {
-		document.getElementById("emailsigninpassword").style.borderColor =
-			"red";
-		document.getElementById("emailsigninp").style.color = "red";
-		document.getElementById("emailsigninp").innerText =
-			"Enter correct password";
-	}
+
+if(document.getElementById("emailsigninpassword").value==e.password){
+localStorage.setItem("displayusername",JSON.stringify(e.username))	
+alert("Sign in successfull")
+localStorage.setItem("signin",JSON.stringify("successfull"))
+location.reload()
+
+}else{
+document.getElementById("emailsigninpassword").style.borderColor="red"
+document.getElementById("emailsigninpassword").placeholder="enter registered password"
+document.getElementById("emailsigninp").style.color="red"
+document.getElementById("emailsigninp").innerText="Enter correct password"
+}
+});
+
+
+}
+function signinbuttonnumber(){
+/* added new userdata userpassword */
+let userdata=JSON.parse(localStorage.getItem("userdata"))
+userdata.forEach((e)=>{
+
+if(document.getElementById("entersigninnumberpassword").value==e.password){
+	localStorage.setItem("displayusername",JSON.stringify(e.username))	
+alert("Sign in successfull")
+localStorage.setItem("signin",JSON.stringify("successfull"))
+location.reload()
+}else{
+document.getElementById("entersigninnumberpassword").style.borderColor="red"
+document.getElementById("entersigninnumberpassword").placeholder="enter registered password"
+document.getElementById("numbersigninp").innerText="Enter corret password"
+document.getElementById("numbersigninp").style.color="red"
+}
+})
+
 }
 /* modify added updated data */
 // added cart btn below
@@ -416,7 +403,7 @@ const success = JSON.parse(localStorage.getItem("signin"));
 const nameshow = JSON.parse(localStorage.getItem("userdata"));
 if (success == "successfull") {
 	document.getElementById("anchor_a").href = "index.html";
-	document.getElementById("signin").innerText = "";
+	document.getElementById("signin").innerText =JSON.parse(localStorage.getItem("displayusername"))
 	document.getElementById("right").innerHTML = "";
 	let path = document.getElementById("right");
 	let img = document.createElement("img");
@@ -432,7 +419,7 @@ if (success == "successfull") {
 	let a = document.createElement("a");
 	a.setAttribute("href", "userdashboard.html");
 	a.setAttribute("class", "dropdownbtn");
-	a.innerText = nameshow[0]["username"];
+	a.innerText = JSON.parse(localStorage.getItem("displayusername"));
 	a.style.textDecoration = "none";
 	a.style.fontSize = "14px";
 	a.style.color = "#167a92";
@@ -449,6 +436,7 @@ if (success == "successfull") {
 	div2.append(a1, a2);
 	div1.append(a, div2);
 	path.append(img, div1);
+	document.getElementById("signin_signup_popup").innerHTML=""
 } else {
 	document.getElementById("anchor_a").href = "index.html";
 }
@@ -456,17 +444,20 @@ if (success == "successfull") {
 if (cart_show_btn > 0) {
 	document.getElementById("addingnumber").innerText = cart_show_btn;
 	document.getElementById("dropup_content").style.display = "block";
+
 }
-if ("successfull" === JSON.parse(localStorage.getItem("signin"))) {
-	const nameshow = JSON.parse(localStorage.getItem("userdata"));
-	document.getElementById("signin").innerText = nameshow[0]["username"];
-}
+
 document.querySelector("leavesignin").addEventListener("click", coder);
 function coder() {
+	document.getElementById("signin_signup_form").style.display="none"
 	alert("sign out successfull");
 	localStorage.setItem("signin", JSON.stringify("unsuccessfull"));
 	window.location = "index.html";
 }
+
+if("unsuccessfull"==JSON.parse(localStorage.getItem("signin"))){
+	document.getElementById("signin").innerText="Sign in"
+	}
 // /* modify added updated data */
 
 // /*adding functionality end */
