@@ -1,7 +1,7 @@
 // Code here
 
 const navbar = () => {
-    return `    <div id="">
+	return `    <div id="">
     <div id="first_navbar">
         <p class="first_navbar">après all day, the Anthro way!</p>
         <p class="first_navbar" style=" color: white;;">GONE SKIING</p>
@@ -82,7 +82,7 @@ const navbar = () => {
             <p id="mobilesignupp11">Mobile Number *</p>
             <input type="number" id="mobilenumbersignup" placeholder="Enter Number">
             <p id="passwordsignupp11">Password*</p>
-            <input type="text" id="passwordsignup" placeholder="Enter password">
+            <input type="password" id="passwordsignup" placeholder="Enter password">
             <br>
             <div class="tick">
                 <input type="checkbox" id="tick">
@@ -124,7 +124,7 @@ const navbar = () => {
         <p id="signinp2">If your mobile number verified with us, proceed enter using your registered password</p>
             <form id="signinformnumberpage">
                 <p id="numbersigninp">Password *</p>
-            <input type="text" id="entersigninnumberpassword" placeholder="enter code">
+            <input type="password" id="entersigninnumberpassword" placeholder="enter code">
              <br>
              </form>
             <button id="signinbuttonnumber">SIGN IN</button>
@@ -146,7 +146,7 @@ const navbar = () => {
         <p id="signinp2">If your Email verified with us, proceed enter using your registered password</p>
             <form id="signinformemailpage">
                 <p id="emailsigninp">Password *</p>
-            <input type="text" id="emailsigninpassword" placeholder="enter password">
+            <input type="password" id="emailsigninpassword" placeholder="enter password">
              <br>
              </form>
             <button id="signinbuttonemail">SIGN IN</button>
