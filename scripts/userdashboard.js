@@ -102,7 +102,7 @@ const cart_display = (cart_items) => {
 			
 		};
 		td6.append(remove_btn)
-		tr.append(td1,td3,td4,td5,td6)
+		tr.append(td1,td2,td3,td4,td5,td6)
 		document.querySelector("#table").append(tr)
 	});
 
@@ -139,12 +139,25 @@ const display_number=(count)=>{
 	localStorage.setItem("cart_show_btn",JSON.stringify(count))
 	
 }
+const search_bar = document.querySelector("#search-box");
+
+search_bar.addEventListener("keypress", (e) => {
+	if (e.key === "Enter") {
+		e.preventDefault();
+		localStorage.setItem("query", search_bar.value);
+		window.location = "search_page.html";
+	}
+});
 /* added drop-down menu in user dashboard starts here*/
+if(cart_show_btn>0){
+	document.getElementById("addingnumber").innerText=cart_show_btn;
+	document.getElementById("dropup_content").style.display="block"
+}
 const success=JSON.parse(localStorage.getItem("signin"))
 const nameshow=JSON.parse(localStorage.getItem("userdata"))
 if(success=="successfull"){
 	document.getElementById("anchor_a").href="index.html"
-	document.getElementById("signin").innerText=nameshow[0]["username"]
+	document.getElementById("signin").innerText=JSON.parse(localStorage.getItem("displayusername"))
     document.getElementById("right").innerHTML=""
 	let path=document.getElementById("right")
 	let img=document.createElement("img")
@@ -156,9 +169,10 @@ div1.setAttribute("class","dropdown")
 let  a=document.createElement("a")
 a.setAttribute("href","userdashboard.html")
 a.setAttribute("class","dropdownbtn")
-a.innerText=nameshow[0]["username"]
+a.innerText=JSON.parse(localStorage.getItem("displayusername"));
 a.style.textDecoration="none"
 a.style.fontSize="14px"
+a.style.marginTop="7px"
 a.style.color="#167a92"
 let div2=document.createElement("div")
 div2.setAttribute("class","dropdown-content")
@@ -175,13 +189,21 @@ div1.append(a,div2)
 path.append(img,div1)
 }else{
 	document.getElementById("anchor_a").href="index.html"
-}const leave=document.getElementById("leavesignin")
+
+}
+// if("successfull"==JSON.parse(localStorage.getItem("signup"))){
+// 	document.getElementById("signin").innerText="Sign in"
+// }
+
+const leave=document.getElementById("leavesignin")
 leave.onclick=()=>{
+
 	alert("sign out successfull")
 	localStorage.setItem("signin",JSON.stringify("unsuccessfull"))
 	window.location="index.html"
 
 }
+
 /* modify added updated data */
 
 /*ends here*/
